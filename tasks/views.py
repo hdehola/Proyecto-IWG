@@ -25,3 +25,9 @@ def register(request):
         return HttpResponse('Password do not match')
 def login(request):
     return render(request, 'login.html')#{'form': User} buscar si es que existe un formulario para login precreado por django
+
+def nosotros(request):
+    return render(request,'about-us.html')#hacer el html que contenga la informacion sobre nosotros
+
+def corazon(request):
+    return render(request,'corazon.html')#hacer el html que contenga la idea corazon

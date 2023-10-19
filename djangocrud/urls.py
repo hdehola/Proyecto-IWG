@@ -22,5 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', views.Home, name='home'),
     path('register/', views.register, name ='register'),
-    path('login/', views.login, name='login')#url para el login
+    path('login/', views.login, name='login'),#url para el login
+    path('about-us/',views.nosotros, name='nosotros'),#url para la informacion sobre nosotros 
+    path('project-shake-corazon/',views.corazon,name='corazon')#url para redireccionar a la idea corazon
 ]
