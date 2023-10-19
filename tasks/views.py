@@ -23,5 +23,3 @@ def wenapo(request):
             except:
                 return HttpResponse('Username already exists')
         return HttpResponse('Password do not match')
-def signup(request):#tratr de conectar la pantilla SIGNUP.HTML con el boton signup del HOME
-    return render(request,'signup.html')
