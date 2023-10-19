@@ -13,14 +13,40 @@
 
     body {
         
-        background-image: url('https://www.adslzone.net/app/uploads-adslzone.net/2016/06/emerald-moraine-lake_3840x2160-4k-uhd-wallpaper-1.jpg');
-        background-size: cover; 
+        background-image: url('https://i.pinimg.com/originals/e8/d4/ac/e8d4ac66311b71819dd2da7fed783d79.jpg');
+        background-size: cover;
+         
     }
-
+    body::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(6, 6, 53, 0.2);/*continuar aquí*/
+    }
     h1 {
-        color: #fff; /* color del titulo */
+        color: #9500ff; /* color del titulo */
     }
-
+    h2{
+        color:#DC143C;/*color de la descripcion*/
+    }
+    h3{
+        color:#DC143C;
+    }
+    h4{
+        color: #DC143C;
+    }
+    p{
+        color:#fff;/*color de la descripcion*/
+    }
+    p2{
+        color:#fff;
+    }
+    p3{
+        color:#fff;
+    }
     button{
         border:0;
         border-radius: 8px;
@@ -80,4 +106,29 @@
     </a>
     </div>
 </body>
+{% block content %}
+
+<h2>De que trata Project Shake?</h2>
+<p>
+Esta página busca entregar información acerca de la zona que tú quieras en chile, como la cantidad de información que entrega la API, esto mediante una forma inteactiva de elegir la zona en concreto que deseas conocer
+</p>
+<h3>
+¿Cómo obtenemos la información?
+</h3>
+<p2>
+Funciona utilizando la API (Tomorrow.io), la cuál nos entrega la información que usted solicita y nosotros la adecuamos para mejorar la comprensión de la información. 
+</p2>
+<h4>
+Cómo solicito la información?
+</h4>
+
+<p3>
+1-Acceda a la licuadora, utilizando el botón "PRUEBE LA EXPERIENCIA".
+<br>
+2-Una vez en la página, busque la zona que desee buscar en el mapa de la izquierda y arrastre el punto adentro de la licuadora
+<br>
+3-Presione el botón "Mezcla" y ¡¡LISTO!!, tan solo debe esperar un momento a qué se solicite y se le entregue la información correspondiente.
+</p3>
+
+{%endblock%}
 </html>
