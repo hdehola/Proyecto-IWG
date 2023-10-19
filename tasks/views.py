@@ -8,10 +8,10 @@ from django.http import HttpResponse
 def Home(request):
     return render(request, 'Home.html')
 
-def wenapo(request):
+def register(request):
 
     if request.method == 'GET':         
-        return render(request, 'signup.html',
+        return render(request, 'register.html',
          {'form' : UserCreationForm})
     else:
         if request.POST['password1'] == request.POST['password2']:
@@ -23,3 +23,5 @@ def wenapo(request):
             except:
                 return HttpResponse('Username already exists')
         return HttpResponse('Password do not match')
+def login(request):
+    return render(request, 'login.html')#{'form': User} buscar si es que existe un formulario para login precreado por django
