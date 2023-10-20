@@ -12,25 +12,26 @@
     }
 
     body {
-        background-image: url('https://i.pinimg.com/originals/ac/7e/f1/ac7ef11a5e405a60b576e6a15f10fa10.jpg');
-        background-size: cover;
+        background-color:#282a36; 
+        color:#f8f8f2; 
+        padding:10px 0;
     }
     h2, h3, h4 {
-        color:#DC143C;/*color de la descripcion*/
+        color:#50fa7b; 
     }
     p {
-        color:#fff;/*color de la descripcion*/
+        color:#f8f8f2; 
     }
     button{
         border:0;
         border-radius: 8px;
-        color:#fff;
+        color:#f8f8f2; 
         display: flex;
         font-size: 18px;
         padding:4px;
         cursor:pointer;
         transition:.3s;
-        margin-left: 10px; /* Espacio entre los botones */
+        margin-left: 10px; /* Espacio entre los botones, ver si puedo hacer que se adapten al tamaño de la pantalla*/
     }
     button span{
         background-color: #111;
@@ -45,23 +46,22 @@
         transform: scale(0.9)
     }
 
-    /* Estilo del primer botn */
     button:first-of-type{
         background-image: linear-gradient(
             150deg,
-            #9500ff,
-            #09f,
-            #00DDFF
+            #44475a,
+            #282a36,
+            #50fa7b
         );
     }
 
-    /* Estilo del segundo botopn */
+    
     button.secondButton{
         background-image: linear-gradient(
             150deg,
-            #B22222,
-            #DC143C,
-            #FA8072
+            #44475a,
+            #282a36,
+            #50fa7b
         );
     }
     </style>
@@ -82,7 +82,7 @@
       </button></a>
       <a href="http://127.0.0.1:8000/project-shake-corazon/">
         <button class="secondButton">
-          <span>Project Shake</span>
+          <span>PRUEBE LA EXPERIENCIA</span>
       </button></a>
     </div>
 
@@ -97,7 +97,7 @@ Esta página busca entregar información acerca de la zona que tú quieras en ch
 Funciona utilizando la API (Tomorrow.io), la cuál nos entrega la información que usted solicita y nosotros la adecuamos para mejorar la comprensión de la información.
 </p>
 <h4>Cómo solicito la información?</h4>
-
+/*modificar esto y que sea acorde con la idea corazon que tengo en mente y con los cambios de martin*/
 <p>
 1-Acceda a la licuadora, utilizando el botón "PRUEBE LA EXPERIENCIA".
 <br>
