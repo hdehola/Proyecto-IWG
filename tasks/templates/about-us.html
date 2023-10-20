@@ -1,14 +1,75 @@
 <!DOCTYPE html>
-<style>
-    body{
-        background-color:rgb(111, 0, 255)
-    }
-</style>
 <html>
-    <head>Project Shake </head>
+    <head>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: black; /* Añadí un fondo de color negro */
+                color: white; /* Añadí color de texto blanco */
+            }
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 20px;
+            }
+            h1 {
+                text-align: center; /* Centrar el título */
+                font-size: 3em; /* Aumenté el tamaño del título */
+                font-family: Arial, sans-serif; /* Cambié el tipo de letra del título */
+                width: 100%; /* Añadí ancho al título para que se centre correctamente */
+            }
+            img.logo {
+                position: absolute;
+                top: 40px; /* Bajé los logos un poco */
+                width: 120px; /* Reduje el tamaño de los logos */
+                height: 120px; /* Aseguré que ambos logos tengan la misma altura */
+            }
+            img.logo-left {
+                left: 20px;
+            }
+            img.logo-right {
+                right: 20px;
+            }
+            section{
+                display: flex;
+                width:1400px; /* Aumenté el ancho de la sección */
+                height: 1130px; /* Aumenté la altura de la sección */
+                justify-content: center;
+                align-items: center;
+            }
+            section img{
+                width: 0px;
+                flex-grow: 1;
+                object-fit: cover;
+                opacity: .8;
+                transition: .5s ease;
+            }
+            section img:hover{
+                cursor: crosshair;
+                width: 1000px; /* Aumenté el ancho de las imágenes */
+                opacity: 1;
+                filter: contrast(120%);
+            }
+        </style>
+    </head>
     <body>
-        <h1> </h1>
-        <h2> </h2>
-        <h3>*ínsertar informacion sobre el grupo y/o universidad</h3>
+        <header>
+            <img class="logo logo-left" src="https://www.inf.utfsm.cl/images/sitio/di.png"> <!-- Añadí la imagen a la izquierda -->
+            <h1>Equipo de Trabajo</h1> <!-- Añadí el título -->
+            <img class="logo logo-right" src="https://www.learnchile.cl/wp-content/uploads/2019/05/logo-santa-maria.jpg"> <!-- Añadí la imagen a la derecha -->
+        </header>
+        <section>
+            <img src="https://images2.alphacoders.com/551/551563.jpg">
+            <img src="https://images2.alphacoders.com/551/551563.jpg">
+            <img src="https://images2.alphacoders.com/551/551563.jpg">
+            <img src="https://images2.alphacoders.com/551/551563.jpg">
+        </section>
     </body>
 </html>
