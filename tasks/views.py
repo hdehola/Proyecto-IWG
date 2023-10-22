@@ -23,6 +23,7 @@ def register(request):
             except:
                 return HttpResponse('Username already exists')
         return HttpResponse('Password do not match')
+
 def login(request):
     return render(request, 'login.html')#{'form': User} buscar si es que existe un formulario para login precreado por django
 
