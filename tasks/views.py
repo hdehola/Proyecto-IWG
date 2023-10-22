@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from django.http import HttpResponse
+from django.contrib.auth import login, logout
+from django.db import IntegrityError
 
 # Create your views here.
 
@@ -9,7 +10,6 @@ def Home(request):
     return render(request, 'Home.html')
 
 def register(request):
-
     if request.method == 'GET':         
         return render(request, 'register.html',
          {'form' : UserCreationForm})
@@ -19,12 +19,21 @@ def register(request):
                 user = User.objects.create_user(username=request.POST['username'], 
                 password=request.POST['password1'])
                 user.save()
-                return HttpResponse('User created succesfully')
-            except:
-                return HttpResponse('Username already exists')
-        return HttpResponse('Password do not match')
+                login(request, user)
+                return redirect('home')
+            except IntegrityError:
+                return render(request, 'register.html',
+                    {'form' : UserCreationForm, 
+                     "error" : "El usuario ya existe"})
+        return render(request, 'register.html',
+                    {'form' : UserCreationForm, 
+                     "error" : 'Las contraseñas no coinciden'})
 
-def login(request):
+def cerrar_sesion(request):
+    logout(request)
+    return redirect('home')
+
+def login_view(request):
     return render(request, 'login.html')#{'form': User} buscar si es que existe un formulario para login precreado por django
 
 def nosotros(request):
@@ -32,3 +41,4 @@ def nosotros(request):
 
 def corazon(request):
     return render(request,'corazon.html')#hacer el html que contenga la idea corazon
+
