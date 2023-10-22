@@ -34,7 +34,7 @@ def cerrar_sesion(request):
     return redirect('home')
 
 def login_view(request):
-    return render(request, 'login.html')#{'form': User} buscar si es que existe un formulario para login precreado por django
+    return render(request, 'login_view.html')#{'form': User} buscar si es que existe un formulario para login precreado por django
 
 def nosotros(request):
     return render(request,'about-us.html')#hacer el html que contenga la informacion sobre nosotros
