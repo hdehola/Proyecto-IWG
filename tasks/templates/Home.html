@@ -68,23 +68,30 @@
 </head>
 <body>
     <div class="button-container">
-      <a href="http://127.0.0.1:8000/register/">
-        <button>
-          <span>Register</span>
-      </button></a>
-      <a href="http://127.0.0.1:8000/login/">
-      <button class="secondButton">
-          <span>Login</span>
-      </button></a>
-      <a href="http://127.0.0.1:8000/about-us/">
-        <button>
-          <span>About Us</span>
-      </button></a>
-      <a href="http://127.0.0.1:8000/project-shake-corazon/">
-        <button class="secondButton">
-          <span>PRUEBE LA EXPERIENCIA</span>
-      </button></a>
-    </div>
+        {% if user.is_authenticated%}
+            <a href="http://127.0.0.1:8000/Logout/">
+            <button class="secondButton">
+                <span>Logout</span>
+            </button></a>
+        {%else%}
+            <a href="http://127.0.0.1:8000/register/">
+            <button>
+              <span>Register</span>
+            </button></a>
+        {%endif%}
+          <a href="http://127.0.0.1:8000/login/">
+          <button class="secondButton">
+              <span>Login</span>
+          </button></a>
+          <a href="http://127.0.0.1:8000/about-us/">
+            <button>
+              <span>About Us</span>
+            </button></a>
+          <a href="http://127.0.0.1:8000/project-shake-corazon/">
+            <button class="secondButton">
+              <span>PRUEBE LA EXPERIENCIA</span>
+            </button></a>
+        </div>
 
 {% block content %}
 
