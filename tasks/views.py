@@ -42,7 +42,7 @@ def login_view(request):
         if user is None:
             return render(request, 'login_view.html', {'form' : AuthenticationForm, 'error':'El User o contraseña son incorrectos'})
         else:
-            login(request, user)
+            Home(request)#login(request, user)   el error quizas este relacionado con la base de datos...
             return redirect('home')
         
 
