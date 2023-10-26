@@ -45,7 +45,6 @@ def login_view(request):
             Home(request)#login(request, user)   el error quizas este relacionado con la base de datos...
             return redirect('home')
         
-
 def nosotros(request):
     return render(request,'about-us.html')#hacer el html que contenga la informacion sobre nosotros
 
