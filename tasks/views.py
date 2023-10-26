@@ -7,7 +7,9 @@ from django.db import IntegrityError
 # Create your views here.
 
 def Home(request):
-    return render(request, 'Home.html')
+    return render(request, 'Home.html',{})
+def newhome(request):
+    return render(request,'new-home.html',{})
 
 def register(request):
     if request.method == 'GET':         
