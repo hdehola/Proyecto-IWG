@@ -1,18 +1,19 @@
-{% load static %}
+<!--{% load static %} --> 
 <!DOCTYPE html>
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/Home.css' %}">
+    <!--<link rel="stylesheet" href="{% static 'css/Home.css' %}">-->
+    <link rel="stylesheet" type="text/css" href="Home.css'">
 </head>
 <body>
     <div class="button-container">
-        {% if user.is_authenticated%}
+        {% if user.is_authenticated %}
             <a href="http://127.0.0.1:8000/Logout/">
             <button class="secondButton">
                 <span>Logout</span>
             </button></a>
-        {%else%}
+        {% else %}
             <a href="http://127.0.0.1:8000/register/">
             <button>
               <span>Register</span>
@@ -21,7 +22,7 @@
               <button class="secondButton">
                   <span>Login</span>
               </button></a>
-        {%endif%}
+        {% endif %}
           <a href="http://127.0.0.1:8000/about-us/">
             <button>
               <span>About Us</span>
@@ -52,7 +53,7 @@ Funciona utilizando la API (Tomorrow.io), la cuál nos entrega la información q
 3-Presione el botón "Mezcla" y ¡¡LISTO!!, tan solo debe esperar un momento a qué se solicite y se le entregue la información correspondiente.
 </p>
 
-{%endblock%}
+{% endblock %}
 
 </body>
 

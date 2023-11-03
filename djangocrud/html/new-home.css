@@ -1,0 +1,80 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('patagonia-chilena.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /*height: 2500px*/;
+}
+#projectShakeButton, .rightButton, #experienceButton {
+    padding: 10px 20px;
+    border: none;
+    color: #FFFFFF; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+#projectShakeButton {
+    background-color: #505050; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.rightButton {
+    background-color: #505050; 
+}
+
+#experienceButton {
+    background-color: #008000; 
+}
+
+#rightButtons {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#contentTitle {
+    position: absolute;
+    top: 100px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    text-align: center; 
+}
+
+#contentBlock {
+    position: absolute;
+    top: 150px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    text-align: justify; 
+}
+
+#experienceButton {
+    position: absolute;
+    top: 350px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+#footer {
+   position:fixed;
+   bottom:0;
+   width:100%;
+   height:auto;  
+   background:transparent/*#505050*/; 
+   color:#FFFFFF; 
+   text-align: left;
+}
+
+#kiwihaters {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #FFFFFF; 
+}
