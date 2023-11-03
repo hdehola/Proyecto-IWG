@@ -1,39 +1,48 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" type="text/css" href="new-home.css">
+    <link rel="stylesheet" href="{% static 'css/homee.css' %}">
 </head>
 <body>
-<button id="projectShakeButton">PROJECT SHAKE</button>
-<div id="rightButtons">
-<a href="https://www.youtube.com" target="_blank"><button class="rightButton">Ingresa</button></a>
-<a href="https://www.youtube.com" target="_blank"><button class="rightButton" style="background-color:#00000000;">Regístrate</button></a>
-<a href="https://www.youtube.com" target="_blank"><button class="rightButton">Sobre Nosotros</button></a>
-</div>
+    <a href=""><button id="projectShakeButton">PROJECT SHAKE</button></a>
+    <div id="rightButtons">
+        {% if user.is_authenticated %}
+        <a href="logout">
+            <button class="secondButton">
+                <span>Logout</span>
+            </button></a>
+        {% else %}
+        <a href="login" target="_blank"><button class="rightButton">Ingresa</button></a>
+        <a href="register" target="_blank"><button class="rightButton" style="background-color:#00000000;">Regístrate</button></a>
+        {% endif %}
+        <a href="about-us" target="_blank"><button class="rightButton">Sobre Nosotros</button></a>
+    </div>
 <h1 id="contentTitle">Cómo solicito la información?</h1>
 <div id="contentBlock">
-<p> 
-1.- Acceda a la licuadora, utilizando el botón "PRUEBE LA EXPERIENCIA".
-<br>
-2.- Una vez en la página, busque la zona que desee buscar en el mapa de la izquierda y arrastre el punto adentro de la licuadora.
-<br>
-3.- Levante el bloque con la información que quiera conocer con respecto a la zona que selecciono anteriormente.
-<br>
-4.- Presione el botón "Mezcla" y ¡¡LISTO!!, tan solo debe esperar un momento a qué se solicite y se le entregue la información correspondiente.
-</p>
+    <p> 
+    1.- Acceda a la licuadora, utilizando el botón "PRUEBE LA EXPERIENCIA".
+    <br>
+    2.- Una vez en la página, busque la zona que desee buscar en el mapa de la izquierda y arrastre el punto adentro de la licuadora.
+    <br>
+    3.- Levante el bloque con la información que quiera conocer con respecto a la zona que selecciono anteriormente.
+    <br>
+    4.- Presione el botón "Mezcla" y ¡¡LISTO!!, tan solo debe esperar un momento a qué se solicite y se le entregue la información correspondiente.
+    </p>
 </div>
-<a href="https://www.youtube.com" target="_blank"><button id="experienceButton">Pruebe la experiencia ahora</button></a>
-<div id="footer">
-<p>
-¿De qué trata Project Shake?
-<br>
-Esta página busca entregar información acerca de la zona que tú quieras en chile, como la cantidad de información que entrega la API, esto mediante una forma interactiva de elegir la zona en concreto que deseas conocer.
-<br>
-¿Cómo obtenemos la información?
-<br>
-Funciona utilizando la API (Tomorrow.io), la cuál nos entrega la información que usted solicita y nosotros la adecuamos para mejorar la comprensión de la información.
-</p>
-</div>
+<a href="http://127.0.0.1:8000/project-shake-corazon/" target="_blank"><button id="experienceButton">Pruebe la experiencia ahora</button></a>
+    <div id="footer">
+        <p>
+        ¿De qué trata Project Shake?
+        <br>
+        Esta página busca entregar información acerca de la zona que tú quieras en chile, como la cantidad de información que entrega la API, esto mediante una forma interactiva de elegir la zona en concreto que deseas conocer.
+        <br>
+        ¿Cómo obtenemos la información?
+        <br>
+        Funciona utilizando la API (Tomorrow.io), la cuál nos entrega la información que usted solicita y nosotros la adecuamos para mejorar la comprensión de la información.
+        </p>
+    </div>
 <div id="kiwihaters">Proyecto por Kiwihaters</div>
 </body>
 </html>
