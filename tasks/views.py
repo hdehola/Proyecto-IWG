@@ -51,5 +51,6 @@ def nosotros(request):
     return render(request,'about-us.html')#hacer el html que contenga la informacion sobre nosotros
 
 def corazon(request):
-    return render(request,'corazon.html')#hacer el html que contenga la idea corazon
+    #
+    return render(request,'corazon.html',{ })#hacer el html que contenga la idea corazon
 
