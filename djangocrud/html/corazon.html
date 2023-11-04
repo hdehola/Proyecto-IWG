@@ -1,88 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Project Shake</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-            *{
-                margin:0;
-                padding:0;
-                box-sizing: border-box;
-                font-family: 'Roboto', sans-serif;
-            }
-            body{
-                display: flex;
-                flex-direction: column; 
-                justify-content: center;
-                align-items: center;
-                height: 100vh; 
-                background-color:#282a36; 
-                color:#f8f8f2; 
-            }
-            h1 {
-                margin-bottom: 20px; 
-            }
-            .container{
-                position: relative;
-                width: 350px;
-            }
-            input{
-                width: 100%; 
-                padding: 10px;
-                border-radius: 5px 0 0 5px;
-                border: none; 
-                outline: none; 
-                font-size: 1rem;
-                background-color:#44475a; 
-                color:#f8f8f2; 
-            }
-            button{
-                background-color:#50fa7b; 
-                width: 40px; 
-                height: 100%; 
-                position: absolute;
-                border: none; 
-                right: 0;
-                border-radius: 0 5px 5px 0;
-                color: #282a36; 
-                cursor: pointer;
-            }
-            button:hover{
-                background-color:#5af78e; 
-            }
-            
-            header, footer {
-              background-color:#44475a;
-              color:#f8f8f2;
-              padding:10px 0;
-              text-align:center;
-              width:100%;
-              position:absolute;
-            }
-            header {
-              top:0;
-            }
-            footer {/**/
-              bottom:0;/*ver bien que estilo de boton se adapta mejor*/
-            }
-        </style>
-    </head>
-    <body>
-        
-        <header>Bienvenido a Project Shake
-            o
-            Disfruta de Project Shake
-            o 
-            la hora con el día actual
-        </header>
-        <h1>Project Shake</h1> 
-        <div class="container">
-            <input type="text" placeholder="Buscar...">
-            <button>
-               <i class="fas fa-search"></i> 
-            </button>
-        </div>
-        <footer>&copy; 2023 Project Shake...</footer>
-    </body>
-</html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/corazon.css' %}">
+</head>
+<body>
+    <a href=""><button id="projectShakeButton">PROJECT SHAKE</button></a>
+    <div id="rightButtons">
+        {% if user.is_authenticated %}
+        <a href="logout">
+            <button class="secondButton">
+                <span>Logout</span>
+            </button></a>
+        {% else %}
+        <a href="login" target="_blank"><button class="rightButton" id="ingresaButton">Ingresa</button></a>
+        <a href="register" target="_blank"><button class="rightButton" id="registrateButton">Regístrate</button></a>
+        {% endif %}
+        <a href="about-us" target="_blank"><button class="rightButton" id="sobreNosotrosButton">Sobre Nosotros</button></a>
+    </div>
+    <h1 id="contentTitle">¿Cómo está la calidad del aire?</h1>
+    <img src="https://th.bing.com/th/id/OIP.G3iWunofLT1K-nAEI4DyfAAAAA?pid=ImgDet&rs=1" alt="Mapa con las regiones de Chile" id="mapaRegiones">

@@ -1,9 +1,3 @@
-body {
-    background-image: url('https://prodb90286e-pic4.ysjianzhan.cn/upload/slide-021-.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
 a {
     text-decoration: none;
 }
@@ -35,8 +29,6 @@ a {
     padding: 15px 32px;
 }
 
-
-
 #ingresaButton, #registrateButton, #sobreNosotrosButton {
     background-color: black;
     border-radius: 12px;
@@ -55,42 +47,15 @@ a[href="logout"] .secondButton {
 
 h1#contentTitle {
     text-align: center;
-    color: white;
+    color: black;
     font-family: Arial, sans-serif;
+    margin-top: 95px;
+}
+img#mapaRegiones{
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    width: 400px; 
+    height: auto;
     margin-top: 180px;
-}
-
-div#contentBlock {
-    text-align: center;
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
-button#experienceButton {
-    background-color: black;
-    border-radius: 12px;
-    color: white;
-    font-family: Arial, sans-serif;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    padding: 15px 32px;
-}
-
-div#footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: gray;
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
-div#kiwihaters {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    color: white;
-    font-family: Arial, sans-serif;
 }

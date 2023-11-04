@@ -23,7 +23,7 @@ def register(request):
                 password=request.POST['password1'])
                 user.save()
                 login(request, user)
-                return redirect('home')
+                return redirect('new-home')#home
             except IntegrityError:
                 return render(request, 'register.html',
                     {'form' : UserCreationForm, 
@@ -34,7 +34,7 @@ def register(request):
 
 def cerrar_sesion(request):
     logout(request)
-    return redirect('home')
+    return redirect('new-home')#home
 
 def login_view(request):
     if request.method == 'GET':         
@@ -45,7 +45,7 @@ def login_view(request):
             return render(request, 'login_view.html', {'form' : AuthenticationForm, 'error':'El Usuario o contraseña son incorrectos'})
         else:
             login(request, user) 
-            return redirect('home')  
+            return redirect('new-home')#home  
 
 def nosotros(request):
     return render(request,'about-us.html')#hacer el html que contenga la informacion sobre nosotros
