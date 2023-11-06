@@ -48,7 +48,7 @@ def login_view(request):
             return redirect('new-home')#home  
 
 def nosotros(request):
-    return render(request,'about-us.html')#hacer el html que contenga la informacion sobre nosotros
+    return render(request,'nosotros.html')#hacer el html que contenga la informacion sobre nosotros
 
 def corazon(request):
     #

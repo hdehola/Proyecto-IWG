@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/nosotros.css' %}">
+</head>
+<body>
+    <a href="http://127.0.0.1:8000/"><button id="projectShakeButton"><span>PROJECT SHAKE</span></button></a>
+    <div id="botones">
+        {% if user.is_authenticated %}
+            <a href="http://127.0.0.1:8000/logout/">
+                <button id="logoutButton">
+                    <span>Logout</span>
+                </button>
+            </a>
+        {% else %}
+            <a href="http://127.0.0.1:8000/login/" ><button  id="ingresaButton"><span>Ingresa</span></button></a>
+            <a href="http://127.0.0.1:8000/register/" ><button  id="registrateButton"><span>Regístrate</span></button></a>
+        {% endif %}
+        <a href="http://127.0.0.1:8000/about-us/" ><button  id="sobreNosotrosButton"><span>Sobre Nosotros</span></button></a>
+    </div>
+    <h1>Equipo de Trabajo</h1> 
+    <section>
+        <img src="https://images2.alphacoders.com/551/551563.jpg">
+        <img src="https://images2.alphacoders.com/551/551563.jpg">
+        <img src="https://images2.alphacoders.com/551/551563.jpg">
+        <img src="https://images2.alphacoders.com/551/551563.jpg">
+    </section>
+    <a href="https://www.inf.utfsm.cl/">
+        <img id="inf" src="https://www.inf.utfsm.cl/images/sitio/di.png"> 
+    </a>
+    <a href="https://usm.cl/">
+        <img id="usm" src="https://www.learnchile.cl/wp-content/uploads/2019/05/logo-santa-maria.jpg">
+    </a>
+    <footer>&copy; 2023 Project Shake</footer>
+</body>
