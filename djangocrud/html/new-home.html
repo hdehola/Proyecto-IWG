@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/homeFinal.css' %}">
 </head>
 <body>
     <a href="http://127.0.0.1:8000/"><button id="projectShakeButton"><span>PROJECT SHAKE</span></button></a>
@@ -19,25 +19,74 @@
         {% endif %}
         <a href="about-us" ><button  id="sobreNosotrosButton"><span>Sobre Nosotros</span></button></a>
     </div>    
-<h1 id="contentTitle">Cómo solicito la información?</h1>
-<div id="contentBlock">
-    
+    <h1 id="contentTitle">Cómo solicito la información?</h1>
+    <br>
+    <div id="contentBlock">
     <p> 
-    1.- Acceda a la licuadora, utilizando el botón "PRUEBE LA EXPERIENCIA".
+    1.- Acceda a la información, utilizando el botón "PRUEBE LA EXPERIENCIA".
     <br>
     <br>
-    2.- Una vez en la página, busque la zona que desee buscar en el mapa de la izquierda y arrastre el punto adentro de la licuadora.
+    2.- Una vez en la página, busque en el mapa la región de Chile de la cual desea obtener información y arrastre el punto adentro del buscador de comunas.
     <br>
     <br>
-    3.- Levante el bloque con la información que quiera conocer con respecto a la zona que selecciono anteriormente.
+    3.- seleccione la(s) comuna(s) de su intere .
     <br>
     <br>
-    4.- Presione el botón "Mezcla" y ¡¡LISTO!!, tan solo debe esperar un momento a qué se solicite y se le entregue la información correspondiente.
+    4.- Presione el botón "GENERAR" y ¡¡LISTO!!, tan solo debe esperar un momento para que se genere toda la información relevante sobre el clima de la comuna que desea.
     </p>
-    
-</div>
-<a href="project-shake-corazon/" ><button id="experienceButton">Pruebe la experiencia ahora</button></a>
-    <div id="footer">
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+    <a href="project-shake-corazon/" ><button id="experienceButton">Pruebe la experiencia ahora</button></a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="card">
+        <div class="face front">
+            <img src="{% static 'img/aire.jpg' %}" alt="">
+            <h3>¿En qué nos afecta la calidad del aire?</h3>
+        </div>
+        <div class="face back">
+            <p>
+                La calidad del aire tiene un impacto significativo en la salud humana, causando enfermedades respiratorias y cardiovasculares. Los contaminantes atmosféricos pueden penetrar en nuestro sistema respiratorio y circulatorio, dañando nuestros pulmones, corazón y cerebro. La contaminación del aire interior, causada por cocinas con fugas que utilizan queroseno, biomasa o carbón, también es una preocupación, ya que puede resultar en la muerte prematura de millones de personas cada año.
+                Para mejorar la calidad del aire, se requieren medidas a nivel individual, comunitario y gubernamental. Las políticas ambientales pueden ayudar a reducir la contaminación atmosférica. Los bosques y la vegetación son vitales para la absorción de CO2 y la mejora de la calidad del aire. Reducir nuestras emisiones nocivas a través de tecnologías limpias y energías renovables es fundamental. Mantener una buena calidad del aire interior, ventilando la casa a diario, evitando fumar dentro de la casa, y haciendo un mantenimiento regular a los electrodomésticos de cocina y sistemas de calefacción, es igualmente importante. Cada pequeño paso puede marcar una gran diferencia en la construcción de un planeta más saludable.
+            </p>
+            <div class="link">
+                <a href="#" class="" id="">
+                    no se que poner
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="card2">
+        <div class="face front2">
+            <img src="{% static 'img/nose.jpg' %}" alt="">
+            <h3>Proyecto por Kiwihaters</h3>
+        </div>
+        <div class="face back2">
+            <p>
+                <h3>¿De qué trata Project Shake?</h3>
+                Esta página busca entregar información acerca de la calidad del aire en la zona que tú quieras de Chile, esto se hace mediante una forma interactiva para elegir la zona en concreto que deseas conocer.
+                <br>
+                <br>
+                <br>
+                <h3>¿Cómo obtenemos la información?</h3>
+                Funciona utilizando la API (Tomorrow.io), la cuál nos entrega la información que usted solicita y nosotros la adecuamos para mejorar la comprensión de la información.
+                <br>
+                <br>
+            </p>
+            <div class="link2">
+                <a href="#" class="" id="">
+                    Proyecto por Kiwihaters
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--<div id="footer">
         <p>
         ¿De qué trata Project Shake?
         <br>
@@ -48,8 +97,7 @@
         Funciona utilizando la API (Tomorrow.io), la cuál nos entrega la información que usted solicita y nosotros la adecuamos para mejorar la comprensión de la información.
         </p>
     </div>
-<div >
-<div  id="kiwihaters">Proyecto por Kiwihaters</div>
-</div>
+    <div  id="kiwihaters">Proyecto por Kiwihaters</div>-->
+    
 </body>
 </html>
