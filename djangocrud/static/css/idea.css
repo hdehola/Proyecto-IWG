@@ -1,0 +1,162 @@
+a{
+    text-decoration: none;
+}
+#projectShakeButton{
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    border: 0;
+    background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+#projectShakeButton span{
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+
+}
+#projectShakeButton:hover span{
+    background: none;
+
+}
+#projectShakeButton:active{
+    transform: scale(0.9);
+
+}
+#logoutButton{
+    position: absolute;
+    top: 3px;
+    right: 195px;
+    border: 0;
+    background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+#logoutButton span{
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+
+}
+#logoutButton:hover span{
+    background: none;
+
+}
+#logoutButton:active{
+    transform: scale(0.9);
+
+}
+#ingresaButton{
+    position: absolute;
+    top: 3px;
+    right: 340px;
+    border: 0;
+    background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+#ingresaButton span{
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+
+}
+#ingresaButton:hover span{
+    background: none;
+
+}
+#ingresaButton:active{
+    transform: scale(0.9);
+
+}
+#registrateButton{
+    position: absolute;
+    top: 3px;
+    right: 193px;
+    border: 0;
+    background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+#registrateButton span{
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+
+}
+#registrateButton:hover span{
+    background: none;
+
+}
+#registrateButton:active{
+    transform: scale(0.9);
+
+}
+#sobreNosotrosButton{
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    border: 0;
+    background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+#sobreNosotrosButton span{
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+
+}
+#sobreNosotrosButton:hover span{
+    background: none;
+
+}
+#sobreNosotrosButton:active{
+    transform: scale(0.9);
+
+}
+h1#contentTitle {
+    text-align: center;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin-top: 95px;
+}
+img#mapaRegiones{
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    width: 400px; 
+    height: auto;
+    margin-top: 180px;
+}

@@ -1,0 +1,222 @@
+body {
+    background-image: url('https://prodb90286e-pic4.ysjianzhan.cn/upload/slide-021-.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+}
+#projectShakeButton{
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    border: 0;
+    background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+#projectShakeButton span{
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+
+}
+#projectShakeButton:hover span{
+    background: none;
+
+}
+#projectShakeButton:active{
+    transform: scale(0.9);
+
+}
+#logoutButton{
+    position: absolute;
+    top: 3px;
+    right: 195px;
+    border: 0;
+    background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+#logoutButton span{
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+
+}
+#logoutButton:hover span{
+    background: none;
+
+}
+#logoutButton:active{
+    transform: scale(0.9);
+
+}
+#ingresaButton{
+    position: absolute;
+    top: 3px;
+    right: 340px;
+    border: 0;
+    background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+#ingresaButton span{
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+
+}
+#ingresaButton:hover span{
+    background: none;
+
+}
+#ingresaButton:active{
+    transform: scale(0.9);
+
+}
+#registrateButton{
+    position: absolute;
+    top: 3px;
+    right: 193px;
+    border: 0;
+    background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+#registrateButton span{
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+
+}
+#registrateButton:hover span{
+    background: none;
+
+}
+#registrateButton:active{
+    transform: scale(0.9);
+
+}
+#sobreNosotrosButton{
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    border: 0;
+    background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+#sobreNosotrosButton span{
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+
+}
+#sobreNosotrosButton:hover span{
+    background: none;
+
+}
+#sobreNosotrosButton:active{
+    transform: scale(0.9);
+
+}
+#contentTitle{
+    text-align: center;
+    color: white;
+    text-shadow: 3px 0px deeppink, 2px 2px red, -2px 2px blue;
+    font-family: Arial, sans-serif;
+    margin-top: 160px;
+}
+#contentBlock{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 0px deeppink, 2px 2px red, -2px 2px blue;
+    font-family: Arial, sans-serif;
+}
+
+#experienceButton{
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+    left: 550px;
+}
+#experienceButton::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, red,blue,deeppink,blue,red,blue,deeppink,blue);
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+}
+@keyframes glowing{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+#footer{
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+#kiwihaters {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}

@@ -1,38 +1,42 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-
 <head>
-    <link rel="stylesheet" href="{% static 'css/homee.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 <body>
-    <a href=""><button id="projectShakeButton">PROJECT SHAKE</button></a>
-    <div id="rightButtons">
+    <a href="http://127.0.0.1:8000/"><button id="projectShakeButton"><span>PROJECT SHAKE</span></button></a>
+    <div id="botones">
         {% if user.is_authenticated %}
             <a href="logout">
-                <button class="secondButton">
+                <button id="logoutButton">
                     <span>Logout</span>
                 </button>
             </a>
         {% else %}
-            <a href="login" target="_blank"><button class="rightButton" id="ingresaButton">Ingresa</button></a>
-            <a href="register" target="_blank"><button class="rightButton" id="registrateButton">Regístrate</button></a>
+            <a href="login" ><button  id="ingresaButton"><span>Ingresa</span></button></a>
+            <a href="register" ><button  id="registrateButton"><span>Regístrate</span></button></a>
         {% endif %}
-        <a href="about-us" target="_blank"><button class="rightButton" id="sobreNosotrosButton">Sobre Nosotros</button></a>
+        <a href="about-us" ><button  id="sobreNosotrosButton"><span>Sobre Nosotros</span></button></a>
     </div>    
 <h1 id="contentTitle">Cómo solicito la información?</h1>
 <div id="contentBlock">
+    
     <p> 
     1.- Acceda a la licuadora, utilizando el botón "PRUEBE LA EXPERIENCIA".
     <br>
+    <br>
     2.- Una vez en la página, busque la zona que desee buscar en el mapa de la izquierda y arrastre el punto adentro de la licuadora.
+    <br>
     <br>
     3.- Levante el bloque con la información que quiera conocer con respecto a la zona que selecciono anteriormente.
     <br>
+    <br>
     4.- Presione el botón "Mezcla" y ¡¡LISTO!!, tan solo debe esperar un momento a qué se solicite y se le entregue la información correspondiente.
     </p>
+    
 </div>
-<a href="http://127.0.0.1:8000/project-shake-corazon/" target="_blank"><button id="experienceButton">Pruebe la experiencia ahora</button></a>
+<a href="project-shake-corazon/" ><button id="experienceButton">Pruebe la experiencia ahora</button></a>
     <div id="footer">
         <p>
         ¿De qué trata Project Shake?
@@ -44,6 +48,8 @@
         Funciona utilizando la API (Tomorrow.io), la cuál nos entrega la información que usted solicita y nosotros la adecuamos para mejorar la comprensión de la información.
         </p>
     </div>
-<div id="kiwihaters">Proyecto por Kiwihaters</div>
+<div >
+<div  id="kiwihaters">Proyecto por Kiwihaters</div>
+</div>
 </body>
 </html>

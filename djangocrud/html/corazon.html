@@ -3,21 +3,22 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="{% static 'css/corazon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/idea.css' %}">
 </head>
 <body>
-    <a href=""><button id="projectShakeButton">PROJECT SHAKE</button></a>
-    <div id="rightButtons">
+    <a href="http://127.0.0.1:8000/"><button id="projectShakeButton"><span>PROJECT SHAKE</span></button></a>
+    <div id="botones">
         {% if user.is_authenticated %}
-        <a href="logout">
-            <button class="secondButton">
-                <span>Logout</span>
-            </button></a>
+            <a href="logout">
+                <button id="logoutButton">
+                    <span>Logout</span>
+                </button>
+            </a>
         {% else %}
-        <a href="login" target="_blank"><button class="rightButton" id="ingresaButton">Ingresa</button></a>
-        <a href="register" target="_blank"><button class="rightButton" id="registrateButton">Regístrate</button></a>
+            <a href="login" ><button  id="ingresaButton"><span>Ingresa</span></button></a>
+            <a href="register" ><button  id="registrateButton"><span>Regístrate</span></button></a>
         {% endif %}
-        <a href="about-us" target="_blank"><button class="rightButton" id="sobreNosotrosButton">Sobre Nosotros</button></a>
+        <a href="about-us" ><button  id="sobreNosotrosButton"><span>Sobre Nosotros</span></button></a>
     </div>
     <h1 id="contentTitle">¿Cómo está la calidad del aire?</h1>
     <img src="https://th.bing.com/th/id/OIP.G3iWunofLT1K-nAEI4DyfAAAAA?pid=ImgDet&rs=1" alt="Mapa con las regiones de Chile" id="mapaRegiones">
