@@ -9,8 +9,6 @@ from urllib.error import HTTPError
 # Create your views here.
 
 def test(request):
-    try:
-        if request.method =='POST':
             
     return render(request, 'test.html',{})
 
