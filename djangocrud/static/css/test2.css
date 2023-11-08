@@ -1,0 +1,65 @@
+:root{
+    --estado-buda:0.3s;
+    --cada-item:28px;
+    --cantidad-items:0;
+}
+
+body{
+    background-color: aqua;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial;
+    font-size: 16px;
+    gap: 30px;
+}
+
+header{
+    width: 200px;
+    background: #1E1E1E;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 16px;
+
+}
+
+nav ul li{
+    border-bottom: 1px solid #1E1E1E;
+}
+
+
+nav ul a{
+    box-sizing: border-box;
+    color: white;
+    background: #121212;
+    display: block;
+    width: 100%;
+    padding: 6px 10px;
+    text-decoration: none;
+}
+
+nav ul ul{
+    height: 0px;
+    overflow: hidden;
+    transition: var(--estado-buda);
+    counter-reset: items;
+}
+nav ul ul li{
+    counter-increment: items;
+}
+
+nav ul li:hover ul{
+    height: calc(var(--cantidad-items)*var(--cada-item));
+    background: rgb(241,227,5);
+    background: linear-gradient(90deg, rgba(241,227,5,0.9954105206389925) 0%, rgba(68,255,205,1) 40%, rgba(97,0,255,1) 88%);
+    height: 100%;
+    max-height: calc( counter(items) * var(--cada-item) );
+}
+
+nav ul ul a{
+    background: transparent;
+}
