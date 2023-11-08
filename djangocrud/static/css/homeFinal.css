@@ -1,15 +1,5 @@
 body {
-    /*background-image: url('https://prodb90286e-pic4.ysjianzhan.cn/upload/slide-021-.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover*/
-    
-    
-    /*background: rgb(241,227,5);
-    background: linear-gradient(90deg, rgba(241,227,5,0.9954105206389925) 0%, rgba(68,255,205,1) 40%, rgba(97,0,255,1) 88%);*/
-    
     flex-wrap: wrap;
-
     margin: 0;
     width: 100vw;
     height: 158vh;

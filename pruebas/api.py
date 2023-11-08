@@ -21,7 +21,7 @@ state_dict = {state: [] for state in states}
 
 
 
-region = "Valparaiso"  
+region = "Los Lagos"
 url = f"http://api.airvisual.com/v2/cities?state={region}&country=Chile&key=876c58b7-cfe7-4ce0-8cdc-c4967b660ee7"
 
 response = requests.get(url)
@@ -31,6 +31,6 @@ comunas = []
 for item in data['data']:
     comunas.append(item['city'])
 
-#print(comunas)
+print(comunas)
 # disponibles ['Concon', 'La Greda', 'La Ligua', 'Llaillay', 'Los Maitenes', 'Puchuncavi', 'Quillota', 'Quilpue',
 #  'Quintero', 'San Antonio', 'San Felipe', 'Valparaiso', 'Villa Alemana', 'Vina del Mar']

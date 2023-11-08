@@ -5,120 +5,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProjectShake</title>
-    <link rel="stylesheet" href="{% static 'css/top.css' %}">
+    <link rel="stylesheet" href="{% static 'css/rank.css' %}">
 </head>
 <body>
-    <p>
-        Seleccione la región de la cual quiere obtener la información
-    </p>
+    <a href="http://127.0.0.1:8000/"><button id="projectShakeButton"><span>PROJECT SHAKE</span></button></a>
+    <div id="botones">
+        {% if user.is_authenticated %}
+            <a href="logout">
+                <button id="logoutButton">
+                    <span>Logout</span>
+                </button>
+            </a>
+        {% else %}
+            <a href="login" ><button  id="ingresaButton"><span>Ingresa</span></button></a>
+            <a href="register" ><button  id="registrateButton"><span>Regístrate</span></button></a>
+        {% endif %}
+        <a href="about-us" ><button  id="sobreNosotrosButton"><span>Sobre Nosotros</span></button></a>
+    </div>
+    <h1 id="contentTitle">
+        Zonas Geográficas de Chile
+    </h1>
     <div id="header">
         <ul class="nav">
-            <li><a href="#">Región 1</a>
+            <li><a href="#">Zona Norte</a>
                 <ul>
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                    <li><a href="#">Comuna 3</a></li>
-                    <li><a href="#">Comuna 4</a></li>
+                    <li><a href="#">Arica y Parinacota</a>
+                        <ul>
+                            <li><a href="#">Arica</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Tarapacá</a>
+                        <ul>
+                            <li><a href="#">Alto Hospicio</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Atacama</a>
+                        <ul>
+                            <li><a href="#">Huasco</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Antofagasta</a>
+                        <ul>
+                            <li><a href="#">Calama</a></li>
+                            <li><a href="#">Tocopilla</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
-            <li><a href="#">Región 2</a></li>
+            <li><a href="#">Zona Norte Chico</a>
                 <ul>
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                    <li><a href="#">Comuna 3</a></li>
-                    <li><a href="#">Comuna 4</a></li>
+                    <li><a href="#">Valparaíso</a>
+                        <ul>
+                            <a href="#">Concon</a>
+                            <a href="#">La Greda</a>
+                            <a href="#">La Ligua</a>
+                            <a href="#">Llaillay</a>
+                            <a href="#">Los Maitenes</a>
+                            <a href="#">Puchuncaví</a>
+                            <a href="#">Quillota</a>
+                            <a href="#">Quilpue</a>
+                            <a href="#">Quintero</a>
+                            <a href="#">San Antonio</a>
+                            <a href="#">San Felipe</a>
+                            <a href="#">Valparaíso</a>
+                            <a href="#">Villa Alemana</a>
+                            <a href="#">Viña del Mar</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Coquimbo</a>
+                        <ul>
+                            <a href="#">Coquimbo</a>
+                            <a href="#">Cuncumen</a>
+                            <a href="#">La Serena</a>
+                        </ul>
+                    </li>
                 </ul>
-            <li><a href="#">Región 3</a></li>
+            </li>
+            <li><a href="#"> Zona Central</a>
                 <ul>
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                    <li><a href="#">Comuna 3</a></li>
-                    <li><a href="#">Comuna 4</a></li>
+                    <li><a href="#">O'Higgins</a>
+                        <ul>
+                            <a href="#">Placilla</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Región Metropolitana de Santiago</a>
+                        <ul>
+                            <a href="#">Curacaví</a>
+                            <a href="#">Las Condes</a>
+                            <a href="#">Peñaflor</a>
+                            <a href="#">Pudahuel</a>
+                            <a href="#">Santiago</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Maule</a>
+                        <ul>
+                            <a href="#">Cauquenes</a>
+                            <a href="#">Curico</a>
+                            <a href="#">Maule</a>
+                            <a href="#">Talca</a>
+                        </ul>
+                    </li>
                 </ul>
-            <li><a href="#">Región 4</a></li>
+            </li>
+            <li><a href="#">Zona Sur</a>
                 <ul>
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                    <li><a href="#">Comuna 3</a></li>
-                    <li><a href="#">Comuna 4</a></li>
+                    <li><a href="#">Biobío</a>
+                        <ul>
+                            <a href="#">Chiguayante</a>
+                            <a href="#">Chillán</a>
+                            <a href="#">Concepción</a>
+                            <a href="#">Coronel</a>
+                            <a href="#">Laja</a>
+                            <a href="#">Los Ángeles</a>
+                            <a href="#">Nacimiento</a>
+                            <a href="#">Puente Alto</a>
+                            <a href="#">San Carlos</a>
+                            <a href="#">Talcahuano</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Los Ríos</a>
+                        <ul>
+                            <a href="#">La Union</a>
+                            <a href="#">Valdivia</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Araucanía</a>
+                        <ul>
+                            <a href="#">Angol</a>
+                            <a href="#">Pitrufquen</a>
+                            <a href="#">Temuco</a>
+                            <a href="#">Traiguen</a>
+                            <a href="#">Victoria</a>
+                        </ul>
+                    </li>
                 </ul>
-            <li><a href="#">Región 5</a></li>
+            </li>
+            <li><a href="#">Zona Austral</a>
                 <ul>
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                    <li><a href="#">Comuna 3</a></li>
-                    <li><a href="#">Comuna 4</a></li>
+                    <li><a href="#">Aysén</a>
+                        <ul>
+                            <a href="#">Coyhaique</a>
+                            <a href="#">Puerto Aysen</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Magallanes</a>
+                        <ul>
+                            <a href="#">Punta Arenas</a>
+                        </ul>
+                    </li>
+                    <li><a href="#">Los Lagos</a>
+                        <ul>
+                            <a href="#">Osorno</a>
+                            <a href="#">Puerto Montt</a>
+                            <a href="#">Puerto Varas</a>
+                        </ul>
+                    </li>
                 </ul>
-            <li><a href="#">Región 6</a></li>
-                <ul>
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                    <li><a href="#">Comuna 3</a></li>
-                    <li><a href="#">Comuna 4</a></li>
-                </ul>
-            <li><a href="#">Región 7</a></li>
-                <ul>
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                    <li><a href="#">Comuna 3</a></li>
-                    <li><a href="#">Comuna 4</a></li>
-                </ul>
-            <li><a href="#">Región 8</a></li>
-                <ul>
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                    <li><a href="#">Comuna 3</a></li>
-                    <li><a href="#">Comuna 4</a></li>
-                </ul>
-            <li><a href="#">Región 9</a></li>
-                <ul>
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                    <li><a href="#">Comuna 3</a></li>
-                    <li><a href="#">Comuna 4</a></li>
-                </ul>
-            <li><a href="#">Región 10</a></li>
-                <ul>
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                    <li><a href="#">Comuna 3</a></li>
-                    <li><a href="#">Comuna 4</a></li>
-                </ul>
-            <li><a href="#">Región 11</a></li>
-                <ul>
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                    <li><a href="#">Comuna 3</a></li>
-                    <li><a href="#">Comuna 4</a></li>
-                </ul>
-            <li><a href="#">Región 12</a></li>
-                <ul>
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                    <li><a href="#">Comuna 3</a></li>
-                    <li><a href="#">Comuna 4</a></li>
-                </ul>
-            <li><a href="#">Región 13</a></li>
-                <ul>
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                    <li><a href="#">Comuna 3</a></li>
-                    <li><a href="#">Comuna 4</a></li>
-                </ul>
-            <li><a href="#">Región 14</a></li>
-                <ul>
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                    <li><a href="#">Comuna 3</a></li>
-                    <li><a href="#">Comuna 4</a></li>
-                </ul>
-            <li><a href="#">Región 15</a></li>
-                <ul>
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                    <li><a href="#">Comuna 3</a></li>
-                    <li><a href="#">Comuna 4</a></li>
-                </ul>
+            </li>
         </ul>
     </div>
 
@@ -128,108 +171,6 @@
 
 
 
-
-
-
-
-
-
-
-<!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/test2.css' %}">
-</head>
-<body>
-    <p>
-        Mueva el mouse sobre el botón
-    </p>
-    <nav>
-        <ul>
-            <li><a href="#">Region 1</a></li>
-                <ul style="--cantidad-items: 2">
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                </ul>
-            <li><a href="#">Region 2</a></li>
-                <ul style="--cantidad-items: 2">
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                </ul>
-            <li><a href="#">Region 3</a></li>
-                <ul style="--cantidad-items: 2">
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                </ul>
-            <li><a href="#">Region 4</a></li>
-                <ul style="--cantidad-items: 2">
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                </ul>
-            <li><a href="#">Region 5</a></li>
-                <ul style="--cantidad-items: 2">
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                </ul>
-            <li><a href="#">Region 6</a></li>
-                <ul style="--cantidad-items: 2">
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                </ul>
-            <li><a href="#">Region 7</a></li>
-                <ul style="--cantidad-items: 2">
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                </ul>
-            <li><a href="#">Region 8</a></li>
-                <ul style="--cantidad-items: 2">
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                </ul>
-            <li><a href="#">Region 9</a></li>
-                <ul style="--cantidad-items: 2">
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                </ul>
-            <li><a href="#">Region 10</a></li>
-                <ul style="--cantidad-items: 2">
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                </ul>
-            <li><a href="#">Region 11</a></li>
-                <ul style="--cantidad-items: 2">
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                </ul>
-            <li><a href="#">Region 12</a></li>
-                <ul style="--cantidad-items: 2">
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                </ul>
-            <li><a href="#">Region 13</a></li>
-                <ul style="--cantidad-items: 2">
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                </ul>
-            <li><a href="#">Region 14</a></li>
-                <ul style="--cantidad-items: 2">
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                </ul>
-            <li><a href="#">Region 15</a></li>
-                <ul style="--cantidad-items: 2">
-                    <li><a href="#">Comuna 1</a></li>
-                    <li><a href="#">Comuna 2</a></li>
-                </ul>
-        </ul>
-    </nav>
-</body>
-</html>
--->
 
 
 
