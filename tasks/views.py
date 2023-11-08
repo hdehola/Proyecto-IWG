@@ -3,11 +3,16 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
+import urllib.request
+from urllib.error import HTTPError
 
 # Create your views here.
 
-def Home(request):
-    return render(request, 'Home.html',{})
+def test(request):
+    try:
+        if request.method =='POST':
+            
+    return render(request, 'test.html',{})
 
 def newhome(request):
     return render(request,'new-home.html',{})
