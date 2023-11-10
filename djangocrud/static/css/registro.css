@@ -1,0 +1,65 @@
+body {
+    background-color: rgb(15, 29, 217);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 205), cyan);
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 20px;
+    width: 450px;
+    height: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: white;
+    width: 450px;
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    border: 0px solid #ccc;
+    border-radius: 10px;
+}
+.input-group {
+    position: relative;
+}
+.input-group input[type="password"] {
+    padding-right: 0px; /* Espacio para el botón de mostrar/ocultar contraseña */
+}
+.input-group button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 18px 12px;
+    background-color: transparent;
+    border: 0;
+    cursor: circle;
+}
+.mb-4 input[type="text"] {
+    padding-right: 40px;
+}
+.mb-4 input[type="password"] {
+    padding-right: 40px;
+}
+button[type="submit"] {
+    width: 115%;
+    background-color: #47A737;
+    color: #fff;
+    border: 6;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+button[type="submit"]:hover {
+    background-color: #3C9030;
+
+}
