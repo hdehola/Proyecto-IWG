@@ -24,19 +24,41 @@
         <a href="http://127.0.0.1:8000/about-us/" ><button  id="sobreNosotrosButton"><span>Sobre Nosotros</span></button></a>
     </div>
     <h1 id="contentTitle">¿Cómo está la calidad del aire?</h1>
-    <img src="{% static 'img/mapa.png' %}" alt="Mapa con las regiones de Chile" id="mapaRegiones">
+    <!--<img src="{% static 'img/mapa.png' %}" alt="Mapa con las regiones de Chile" id="mapaRegiones">-->
     <div class="container">
         <img src="{% static 'img/Morado.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="morado">
         <img src="{% static 'img/Verde.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="verde">
         <img src="{% static 'img/Naranja.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="naranja">
         <img src="{% static 'img/Celeste.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="celeste">
     </div>
+    <!--
     <div class="container" ondrop="drop(event)" ondragover="allowDrop(event)">
         <div class="figura">
             <div class="box" id="0"></div>
             <h2>Comunas:</h2>
         </div>
     </div>
+    
     <script src="{% static 'java/arrastre.js' %}"></script>
+    -->
+    <div>
+        <ul id="regiones">
+            <li><img src="{% static 'img/regiones/Arica.png' %}" draggable="true" id="Arica" alt="Arica"></li>
+            <li><img src="{% static 'img/regiones/Tarapaca.png' %}" draggable="true" id="Tarapaca" alt="Tarapaca"> </li>
+            <li><img src="{% static 'img/regiones/Antofagasta.png' %}" draggable="true" id="Antofagasta" alt="Antofagasta"></li>
+            <li><img src="{% static 'img/regiones/Atacama.png' %}" draggable="true" id="Atacama" alt="Atacama"></li>
+            <li><img src="{% static 'img/regiones/Coquimbo.png' %}" draggable="true" id="Coquimbo" alt="Coquimbo"></li>
+            <li><img src="{% static 'img/regiones/Valpo.png' %}" draggable="true" id="Valpo" alt="Valpo"></li>
+            <li><img src="{% static 'img/regiones/Metropolitana.png' %}" draggable="true" id="Metropolitana" alt="Metropolitana"></li>
+            <li><img src="{% static 'img/regiones/O Higgins.png' %}" draggable="true" id="O Higgins" alt="O Higgins"></li>
+            <li><img src="{% static 'img/regiones/Bio Bio.png' %}" draggable="true" id="Bio Bio" alt="Bio Bio"></li>
+            <li><img src="{% static 'img/regiones/Araucania.png' %}" draggable="true" id="Araucania" alt="Araucania"></li>
+            <li><img src="{% static 'img/regiones/Los Rios.png' %}" draggable="true" id="Los Rios" alt="Los Rios"></li>
+            <li><img src="{% static 'img/regiones/Los Lagos.png' %}" draggable="true" id="Los Lagos" alt="Los Lagos"></li>
+            <li><img src="{% static 'img/regiones/Aysen.png' %}" draggable="true" id="Aysen" alt="Aysen"></li>
+            <li><img src="{% static 'img/regiones/Magallanes.png' %}" draggable="true" id="Magallanes" alt="Magallanes"></li>
+    </div>
+    <div>
+        
 </body>
 </html>
