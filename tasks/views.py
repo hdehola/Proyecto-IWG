@@ -56,3 +56,6 @@ def nosotros(request):
 def corazon(request):
     #
     return render(request,'corazon.html',{ })#hacer el html que contenga la idea corazon
+
+def api(request): 
+    return render(request,'api_v.html',{ })

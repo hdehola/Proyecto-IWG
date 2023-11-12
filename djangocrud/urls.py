@@ -26,5 +26,6 @@ urlpatterns = [
     path('logout/', views.cerrar_sesion, name= 'logout'),
     path('login/', views.login_view, name= 'login'),#url para el login
     path('about-us/',views.nosotros, name= 'nosotros'),#url para la informacion sobre nosotros 
-    path('project-shake-corazon/',views.corazon,name= 'corazon')#url para redireccionar a la idea corazon
+    path('project-shake-corazon/',views.corazon,name= 'corazon'),#url para redireccionar a la idea corazon
+    path('api/',views.api,name='api')
 ]
