@@ -5,6 +5,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
 import urllib.request
 from urllib.error import HTTPError
+import json
 
 # Create your views here.
 
@@ -58,4 +59,15 @@ def corazon(request):
     return render(request,'corazon.html',{ })#hacer el html que contenga la idea corazon
 
 def api(request): 
-    return render(request,'api_v.html',{ })
+    estado = "Los lagos" #variable que tiene que ingresar el usuario region
+    estado = estado.replace(' ', '%20')
+    ciudad = "Osorno" #variable que tiene que ingresar el usuario comuna
+    ciudad = ciudad.replace(' ', '%20')
+    url = urllib.request.Request("http://api.airvisual.com/v2/city?city="+ciudad+"&state="+estado+"&country=Chile&key=4217e686-4099-4071-b670-5664769faaad")
+    source = urllib.request.urlopen(url).read()
+    alo = json.loads(source)
+    if alo ["status"] == "success":
+        dato = { "aqiuo": str(alo["data"]["current"]["pollution"]["aqius"]).capitalize}
+        return render(request,'api_v.html', dato)
+    else:
+        print("error")
