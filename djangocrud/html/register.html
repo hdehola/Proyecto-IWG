@@ -2,8 +2,7 @@
 <html>
 <head>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/register.css' %}">
-    <link rel="stylesheet" href="{% static 'css/Registro.css' %}">
+    <link rel="stylesheet" href="{% static 'css/registroFinal.css' %}">
 </head>
 <head>
     <meta charset="UTF-8">
@@ -13,7 +12,6 @@
 <body>
     <div>
         <a href="/"><button id="projectShakeButton"><span>PROJECT SHAKE</span></button></a>
-        <a href="/login" ><button  id="ingresaButton"><span>Ingresa</span></button></a>
         <a href="/about-us" ><button  id="sobreNosotrosButton"><span>Sobre Nosotros</span></button></a>
     </div>
 </head>
@@ -21,9 +19,9 @@
             <div class="col-md-4 offset-md-8 text-center mt-5">
                 <form action="/register/" method="POST" class="card card-body shorter-form">
                     <div class="mb-2">
-                        <h1>Registrarse</h1>
+                        <h1>Únete a ProjectShake hoy</h1>
                     </div>
-                    {{error}}
+                    <div class="error-message">{{error|safe}}</div>
                     {% csrf_token %}
                     <div class="mb-4">
                         <input type="text" name="username" class="form-control" placeholder="Usuario">
@@ -49,6 +47,7 @@
                 </form>
             </div>
         </div>
+        <p id="mensaje">¿Ya tienes una cuenta?  <a href="http://127.0.0.1:8000/login/"><button  id="iniciar"><span>Iniciar sesión</span></button></a></p>
     </main>
     <script>
         function togglePassword(inputId) {
