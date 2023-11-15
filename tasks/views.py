@@ -66,8 +66,21 @@ def api(request):
     url = urllib.request.Request("http://api.airvisual.com/v2/city?city="+ciudad+"&state="+estado+"&country=Chile&key=4217e686-4099-4071-b670-5664769faaad")
     source = urllib.request.urlopen(url).read()
     alo = json.loads(source)
-    if alo ["status"] == "success":
-        dato = { "aqiuo": str(alo["data"]["current"]["pollution"]["aqius"]).capitalize()}
+    url_2= ('https://api.tomorrow.io/v4/weather/realtime?location='+estado,' ',ciudad+'&apikey=cRvA0jgpepZ88dCz8vK5S8HrcL5qPm8C')
+    url_2 = "".join(url_2)
+    payload={}
+    headers = {}
+    response = requests.request("GET", url_2, headers=headers, data=payload)
+    ola= response.json()
+    if alo ["status"] == "success" and len(ola) == 2:
+        dato = { "aqiuo": str(alo["data"]["current"]["pollution"]["aqius"]).capitalize(),
+                'humedad': str(ola['data']['values']['humidity'])+'%',
+                'Probabilidad_de_Lluvia': str(ola["data"]["values"]["precipitationProbability"])+'%',
+                'Velocidad_del_Viento': str(ola["data"]["values"]["windSpeed"])+'[Km/h]',
+                'Dirección_del_Viento': str(ola["data"]["values"]["windDirection"]),
+                'Temperatura': str(ola["data"]["values"]["temperature"])+'°C',
+                'Sensación_Térmica': str(ola["data"]["values"]["temperatureApparent"])+'°C'
+                }
         return render(request,'api_v.html', dato)
     else:
         print("error")
