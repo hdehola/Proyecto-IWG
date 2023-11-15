@@ -183,7 +183,7 @@ section img{
 }
 section img:hover{
     cursor: crosshair;
-    width: 1000px; 
+    width: 500px; 
     opacity: 1;
     filter: contrast(120%);
 }
