@@ -10,35 +10,49 @@ body {
 
 h1 {
     color: #333;
+    position: relative;
+    top: -40px;
+    left: 0px;
 }
 
 .container {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    flex-direction: row;
+}
+.container #cityList {
+    position: relative;
+    margin-top: 20px;
+    flex-direction: row;
 }
 
-#morado {
+.container #cityList button {
+    margin: 5px;
+    flex-direction: row;
+}
+
+#Aisen{
     position: relative;
-    top: 135px; /* ajusta la posición vertical según tus necesidades */
+    top: 82px; /* ajusta la posición vertical según tus necesidades */
     left: -560px; /* ajusta la posición horizontal según tus necesidades */
 }
 
-#verde {
+#Antofagasta {
     position: relative;
-    top: 155px;
+    top: 103px;
     left: -593px;
 }
 
-#naranja {
+#Arica {
     position: relative;
-    top: 175px;
+    top: 124px;
     left: -626px;
 }
 
-#celeste {
+#Atacama {
     position: relative;
-    top: 195px;
+    top: 145px;
     left: -660px;
 }
 
@@ -46,12 +60,14 @@ h1 {
     width: 30px;
     height: auto;
     border: 2px solid #555;
-    border-radius: 0px;
+    border-radius: 2px;
 }
 
 .figura {
-    margin-top: 20px;
     text-align: center;
+    position: relative;
+    top: -80px;
+    left: -220px;
 }
 
 .box {
@@ -62,15 +78,15 @@ h1 {
     display: flex;
     justify-content: center;
     position: relative;
-    top: -50px;
-    left: -175px;
+    top: 0px;
+    left: 60px;
 }
-
 
 h2 {
-    color: #4b4a4a;
-    margin: 5px;
+    color: #000000;
+    margin: 9px;
     position: relative;
-    top: -85px;
-    left: -300px;
+    top: -33px;
+    left: -70px;
 }
+

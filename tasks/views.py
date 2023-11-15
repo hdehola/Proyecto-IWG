@@ -1,14 +1,13 @@
-from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
+from django.http import HttpResponse, JsonResponse
+from django.shortcuts import render, redirect
+from django.contrib.auth.models import User
 from django.db import IntegrityError
-import urllib.request
 from urllib.error import HTTPError
-import json
+import urllib.request
 import requests
-
-# Create your views here.
+import json
 
 def test(request):        
     return render(request, 'test.html',{})
@@ -56,6 +55,59 @@ def nosotros(request):
 
 def corazon(request):
     return render(request,'corazon.html',{ })#hacer el html que contenga la idea corazon
+
+def estados(request, imageName):
+    estado = imageName
+    if estado == "Arica":
+        estado = "Arica y Parinacota"
+    url = "http://api.airvisual.com/v2/cities?state="+estado+"&country=Chile&key=4217e686-4099-4071-b670-5664769faaad"
+    
+    try:
+        response = requests.get(url)
+        alo = response.json()
+        if alo["status"] == "success":
+            cities = [data["city"] for data in alo.get("data", [])]
+        else:
+            cities = ["Zona no disponible"]
+            print(estado)
+    except requests.exceptions.RequestException as e:
+        cities = ["Error en la solicitud:", str(e)]
+    return JsonResponse({'cities': cities})
+
+def ciudad_nombre(city_name):
+    print("Nombre de la ciudad:", city_name)
+
+    return HttpResponse("Recibido: " + city_name)
+
+def obtener_calidad_aire_ciudad(request, imageName, boton):
+    estado = imageName
+    ciudad = boton
+    url = f"http://api.airvisual.com/v2/city?city={ciudad}&state={estado}&country=Chile&key=4217e686-4099-4071-b670-5664769faaad"
+
+    try:
+        response = requests.get(url)
+        alo = response.json()
+        if alo["status"] == "success":
+            dato = alo["data"]["current"]["pollution"]["aqius"]
+
+            if 0 <= dato <= 50:
+                calidad_aire = "Verde"
+            elif 50 < dato <= 100:
+                calidad_aire = "Amarillo"
+            elif 100 < dato <= 150:
+                calidad_aire = "Naranja"
+            elif 150 < dato <= 200:
+                calidad_aire = "Rojo"
+            elif 200 < dato <= 300:
+                calidad_aire = "Morado"
+            else:
+                calidad_aire = "Cafe"
+
+            return JsonResponse({'dato': dato, 'calidad_aire': calidad_aire})
+        else:
+            return JsonResponse({'error': 'Error en la respuesta de la API'})
+    except requests.exceptions.RequestException as e:
+        return JsonResponse({'error': f'Error en la solicitud: {str(e)}'})
 
 def api(request):
     try:
@@ -112,4 +164,4 @@ def api_2(request):
         return render(request,'api_v_2.html', valores)
     else:
         print("API en cooldown")
-    
+        
