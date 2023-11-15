@@ -32,7 +32,14 @@
                 <ul>
                     <li><a href="#">Arica y Parinacota</a>
                         <ul>
-                            <li><a href="#">Arica</a></li>
+                            <li><a href="#">
+                                <form class="d-flex justify-content-center" action="test" method="POST">
+                                    {% csrf_token %}
+                                    <input class="btn btn-primary" type="submit" value="Arica"
+                                        name1="estado"
+                                        name2="ciudad">
+                                </form>
+                            </a></li>
                         </ul>
                     </li>
                     <li><a href="#">Tarapacá</a>
