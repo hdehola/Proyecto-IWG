@@ -1,8 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body {
     flex-wrap: wrap;
     margin: 0;
-    width: 100vw;
-    height: 158vh;
+    width: 98vw;
+    height: 288vh;
     text-shadow: 8px 8px 10px #0000008c;
     background-color: #343a40;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
@@ -172,8 +180,8 @@ a{
     text-shadow: 3px 0px black, 2px 2px blue, -2px 2px blueviolet;
     font-family: Arial, sans-serif;
     font-size:larger;
-    margin-right: 15px;
-    margin-right: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #experienceButton{
@@ -283,19 +291,10 @@ a{
 .card:hover .back{
     transform: perspective(600px) rotateY(360deg);
 }
-#footer{
-    position: absolute;
-    bottom: 0;
-    left: 0px;
-    width: 100%;
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-}
 .card2{
     position:absolute;
     right: 0;
-    top: 657px;
+    top: 597px;
     width: 500px;
     height: 550px;
     margin: 20px;
@@ -369,4 +368,101 @@ a{
     right: 0;
     color: white;
     font-family: Arial, sans-serif;
+}
+
+#relevante{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 0px black, 2px 2px blue, -2px 2px blueviolet;
+    font-family: Arial, sans-serif;
+    font-size:larger;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 155px;
+}
+
+#otro{
+    margin-top: 60px;
+    margin-left: 80px;
+}
+
+#otroBoton{
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+    left: 550px;
+}
+#otroBoton::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, red,blue,deeppink,blue,red,blue,deeppink,blue);
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+}
+
+.wrap{
+    margin-top: 150px;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: 50px;
+    color: white;
+}
+
+.widget{
+    width: 45%;
+    margin: 22px;
+    margin-left: 2px;
+}
+
+.widget p{
+    display: inline-block;
+    line-height: 1em;
+}
+
+.fecha{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 5px;
+    background: rgba(0,0,0,.5);
+    padding: 20px;
+    width: 100%;
+}
+
+.reloj{
+    font-family: 'Lato', sans-serif;
+    width: 30%;
+    height: 250px;
+    padding: 20px;
+    font-size: 90px;
+    text-align: center;
+    background: rgba(0,0,0,.5);
+    color: white;
+    margin-left: 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reloj .caja-segundos{
+    display: inline-block;
+}
+
+.reloj .segundos, .reloj .ampm{
+    font-size: 35px;
+    display: block;
 }
