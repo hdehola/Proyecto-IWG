@@ -1,21 +1,36 @@
 <!DOCTYPE html>
-<title> Login </title>
-<style>
-    body{
-        background-color:rgb(71, 167, 55)
-    }
-</style>
-
 <html>
-    <h1>Login</h1>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/Login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/logina.css' %}">
+</head>
+<body>
+    <div>
+        <a href="/"><button id="projectShakeButton"><span>PROJECT SHAKE</span></button></a>
+        <a href="/register" ><button  id="registroButton"><span>Registro</span></button></a>
+        <a href="/about-us" ><button  id="sobreNosotrosButton"><span>Sobre Nosotros</span></button></a>
+    </div>
+<main class="container">
+    <div class="col-md-4 offset-md-8 text-center mt-5">
+        <form action="/login/" method="POST">
+            <div class="mb-2">
+                <h1>Inicio de sesion</h1>
+            </div>
+            {{error}}
+            {% csrf_token %}
+            <div class="mb-4">
+                <input type="text" name="username" class="form-control" placeholder="Usuario">
+            </div>
+            <div class="mb-4">
+                    <input type="password" name="password" class="form-control" placeholder="Contraseña">
+                    <button type="button" class="btn btn-outline-secondary" onclick="togglePassword('password1')">
+                        <i class="fas fa-eye"></i> <!-- Icono para Mostrar -->
+                    </button>
+            </div>
+            <button type="submit">Inicia sesión</button>
+        </form>
+    </div>
+</main>
+</body>
 </html>
-
-{{error}}
-
-<form action="/login/"method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <button>
-       Inicia sesión
-    </button>
-</form>
