@@ -1,8 +1,8 @@
-body{
+body {
     flex-wrap: wrap;
     margin: 0;
-    width: 100%;
-    height: 90vh;
+    width: 90vw;
+    height: 85vh;
     text-shadow: 8px 8px 10px #0000008c;
     background-color: #343a40;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
@@ -69,64 +69,6 @@ a{
     transform: scale(0.9);
 
 }
-#ingresaButton{
-    position: absolute;
-    top: 3px;
-    right: 340px;
-    border: 0;
-    background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
-    border-radius: 8px;
-    color: white;
-    display: flex;
-    font-size: 18px;
-    padding: 4px;
-    cursor: pointer;
-    transition: .3s;
-}
-#ingresaButton span{
-    background-color: #111;
-    padding: 16px 24px;
-    border-radius: 6px;
-    transition: .3s;
-
-}
-#ingresaButton:hover span{
-    background: none;
-
-}
-#ingresaButton:active{
-    transform: scale(0.9);
-
-}
-#registrateButton{
-    position: absolute;
-    top: 3px;
-    right: 193px;
-    border: 0;
-    background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
-    border-radius: 8px;
-    color: white;
-    display: flex;
-    font-size: 18px;
-    padding: 4px;
-    cursor: pointer;
-    transition: .3s;
-}
-#registrateButton span{
-    background-color: #111;
-    padding: 16px 24px;
-    border-radius: 6px;
-    transition: .3s;
-
-}
-#registrateButton:hover span{
-    background: none;
-
-}
-#registrateButton:active{
-    transform: scale(0.9);
-
-}
 #sobreNosotrosButton{
     position: absolute;
     top: 3px;
@@ -156,59 +98,142 @@ a{
     transform: scale(0.9);
 
 }
-h1 {
-    text-align: center; 
-    font-size: 3em; 
-    font-family: 'Roboto', sans-serif; 
-    width: 100%;
-    margin-top: 80px;
-    color: white; 
-    text-shadow: 3px 0px black, 2px 2px blue, -2px 2px blueviolet;
-}
-section{
-    display: flex;
-    width:1100px; 
-    height: 430px; 
-    justify-content: center;
-    align-items: center;
+.container {
+    background:transparent;
+    border: 3px solid blue;
+    border-radius: 5px;
+    padding: 20px;
+    width: 500px;
+    height: 400px;
+    box-shadow: 0 0 30px blueviolet;
+    margin-top: 150px;
     margin-left: auto;
     margin-right: auto;
 }
-section img{
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .8;
-    transition: .5s ease;
+.mb-2{
+    text-align: center;
+    color: white;
+    text-shadow: 3px 0px black, 2px 2px blue, -2px 2px blueviolet;
+    font-family: Arial, sans-serif;
+    margin-top: 10px;
+    font-size: large;
 }
-section img:hover{
-    cursor: crosshair;
-    width: 500px; 
-    opacity: 1;
-    filter: contrast(120%);
+.form-control {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid blue;
+    border-radius: 10px;
 }
-#inf{
+.input-group {
+    position: relative;
+}
+.input-group input[type="password"] {
+    padding-right: 0px;
+    width: 461px;
+}
+.input-group button {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    padding: 18px 12px;
+    background-color: transparent;
+    border: 0;
+    cursor: circle;
+}
+
+.mb-4 input[type="text"] {
+    position: relative;
+    padding-right: 1px;
+    width: 460px;
+}
+.mb-4 input[type="password"] {
+    padding-right: 40px;
+    position: relative;
+    width: 419px;
+}
+.mb-4 button{
+    position: absolute;
+}
+button[type="submit"] {
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
     border-radius: 12px;
-    width: 130px; 
-    height: 130px;
-    float: left;
-    margin-left: 20px;
-    margin-top: -60px;
+    left: 143px;
 }
-#usm{
+button[type="submit"]:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, red,blue,deeppink,blue,red,blue,deeppink,blue);
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+}
+@keyframes glowing{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.error-message {
+    text-align: center;
+    color: red;
+    background-color: black;
+    width: max-content;
+    font-family: Arial, sans-serif;
+    margin-top: 10px;
+    font-size:large;
+    margin-left: 130px;
+}
+#mensaje{
+    text-align: center;
+    color: white;
+    width: max-content;
+    font-family: Arial, sans-serif;
+    margin-top: 30px;
+    font-size:larger;
+    margin-left: 130px;
+}
+
+#registro{
+    border: 0;
+    background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
     border-radius: 12px;
-    width: 130px; 
-    height: 130px;
-    float: right;
-    margin-right: 20px;
-    margin-top: -60px;
+    color: white;
+    padding: 3px 0px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 14px;
 }
-footer {
-    background-color:#44475a; 
-    color:#f8f8f2; 
-    padding:10px 0; 
-    text-align:center; 
-    width:100%; 
-    position:absolute; 
-    bottom:-13px; 
-  }
+#registro span{
+    background-color: #111;
+    padding:5px;
+    border-radius: 12px;
+    transition: .3s;
+
+}
+#registro:hover span{
+    background: none;
+
+}
+#registro:active{
+    transform: scale(0.9);
+
+}

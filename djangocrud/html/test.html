@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title> Test </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProjectShake</title>
@@ -11,16 +12,16 @@
     <a href="http://127.0.0.1:8000/"><button id="projectShakeButton"><span>PROJECT SHAKE</span></button></a>
     <div id="botones">
         {% if user.is_authenticated %}
-            <a href="logout">
+            <a href="http://127.0.0.1:8000/logout/">
                 <button id="logoutButton">
                     <span>Logout</span>
                 </button>
             </a>
         {% else %}
-            <a href="login" ><button  id="ingresaButton"><span>Ingresa</span></button></a>
-            <a href="register" ><button  id="registrateButton"><span>Regístrate</span></button></a>
+            <a href="http://127.0.0.1:8000/login/" ><button  id="ingresaButton"><span>Ingresa</span></button></a>
+            <a href="http://127.0.0.1:8000/register/" ><button  id="registrateButton"><span>Regístrate</span></button></a>
         {% endif %}
-        <a href="about-us" ><button  id="sobreNosotrosButton"><span>Sobre Nosotros</span></button></a>
+        <a href="http://127.0.0.1:8000/about-us/" ><button  id="sobreNosotrosButton"><span>Sobre Nosotros</span></button></a>
     </div>
     <h1 id="contentTitle">
         Zonas Geográficas de Chile
@@ -31,7 +32,14 @@
                 <ul>
                     <li><a href="#">Arica y Parinacota</a>
                         <ul>
-                            <li><a href="#">Arica</a></li>
+                            <li><a href="#">
+                                <form class="d-flex justify-content-center" action="test" method="POST">
+                                    {% csrf_token %}
+                                    <input class="btn btn-primary" type="submit" value="Arica"
+                                        name1="estado"
+                                        name2="ciudad">
+                                </form>
+                            </a></li>
                         </ul>
                     </li>
                     <li><a href="#">Tarapacá</a>
@@ -90,7 +98,7 @@
                     </li>
                     <li><a href="#">Región Metropolitana de Santiago</a>
                         <ul>
-                            <a href="#">Curacaví</a>
+                            <a href="https://www.google.com/">Curacaví</a>
                             <a href="#">Las Condes</a>
                             <a href="#">Peñaflor</a>
                             <a href="#">Pudahuel</a>

@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from tasks import views
+from tasks.views import estados, obtener_calidad_aire_ciudad
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +28,9 @@ urlpatterns = [
     path('login/', views.login_view, name= 'login'),#url para el login
     path('about-us/',views.nosotros, name= 'nosotros'),#url para la informacion sobre nosotros 
     path('project-shake-corazon/',views.corazon,name= 'corazon'),#url para redireccionar a la idea corazon
-    path('api/',views.api,name='api')
+    path('test/test',views.api,name='api'),
+    path('apis/',views.api_2,name='api2'),
+    path('estados/<str:imageName>/', views.estados, name='estados'),
+    path('ciudad_nombre/<str:city_name>/', views.ciudad_nombre, name='ciudad nombre'),
+    path('obtener_calidad_aire_ciudad/<str:imageName>/<str:boton>/', views.obtener_calidad_aire_ciudad, name='obtener_calidad_aire_ciudad'),
 ]
