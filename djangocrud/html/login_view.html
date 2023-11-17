@@ -7,7 +7,7 @@
 </head>
 <body>
     <div>
-        <a href=""><button id="projectShakeButton"><span>PROJECT SHAKE</span></button></a>
+        <a href="http://127.0.0.1:8000"><button id="projectShakeButton"><span>PROJECT SHAKE</span></button></a>
         <a href="http://127.0.0.1:8000/about-us/" ><button  id="sobreNosotrosButton"><span>Sobre Nosotros</span></button></a>
     </div>
 <main class="container">
@@ -34,5 +34,15 @@
     </div>
     <p id="mensaje">¿No tienes una cuenta?<a href="http://127.0.0.1:8000/register/"><button  id="registro"><span>Regístrate</span></button></a></p>
 </main>
+<script>
+    function togglePassword(inputId) {
+        const input = document.getElementById(inputId);
+        if (input.type === "password") {
+            input.type = "text";
+        } else {
+            input.type = "password";
+        }
+    }
+</script>
 </body>
 </html>

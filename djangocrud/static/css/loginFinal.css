@@ -141,6 +141,7 @@ a{
     border: 0;
     cursor: circle;
 }
+
 .mb-4 input[type="text"] {
     position: relative;
     padding-right: 1px;
@@ -150,6 +151,9 @@ a{
     padding-right: 40px;
     position: relative;
     width: 419px;
+}
+.mb-4 button{
+    position: absolute;
 }
 button[type="submit"] {
     background: black;
