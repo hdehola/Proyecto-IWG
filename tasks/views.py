@@ -8,6 +8,8 @@ from urllib.error import HTTPError
 import urllib.request
 import requests
 import json
+import os
+from django.conf import settings
 
 def test(request):        
     return render(request, 'test.html',{})
@@ -111,18 +113,22 @@ def obtener_calidad_aire_ciudad(request, imageName, boton):
 
 def api(request):
     try:
+        ruta=os.path.join(settings.BASE_DIR,"tasks","geografia.json")
         if request.method == 'POST':
-            estado = request.POST["name1"]
-            estado = estado.replace(' ', '%20')
-            ciudad = request.POST["name1"]
+            ciudad = request.POST["ciudad"]
             ciudad = ciudad.replace(' ', '%20')
-            url = urllib.request.Request("http://api.airvisual.com/v2/city?city="+ciudad+"&state="+estado+"&country=Chile&key=4217e686-4099-4071-b670-5664769faaad")
-            url.add_header('User-Agent', "Piñera")
+            with open(ruta, 'r', encoding='utf-8') as archivo_json:  
+                lista_de_diccionarios = json.load(archivo_json)
+            for diccionario in lista_de_diccionarios:
+                if diccionario["Comuna"] == ciudad or diccionario["Provincia"] == ciudad:
+                    estado = diccionario["Región"]
+            ciudad =ciudad.replace('\xa0', '').replace("\xf3", 'o')
+            estado = estado.replace(' ', '%20').replace('\xa0', '').replace('\xed', 'i')
+            url = urllib.request.Request(f"http://api.airvisual.com/v2/city?city={ciudad}&state={estado}&country=Chile&key=4217e686-4099-4071-b670-5664769faaad")
             source = urllib.request.urlopen(url).read()
             alo = json.loads(source)
             url_2= ('https://api.tomorrow.io/v4/weather/realtime?location='+estado,' ',ciudad+'&apikey=cRvA0jgpepZ88dCz8vK5S8HrcL5qPm8C')
             url_2 = "".join(url_2)
-            url_2.add_header('User-Agent', "Piñera")
             payload={}
             headers = {}
             response = requests.request("GET", url_2, headers=headers, data=payload)
