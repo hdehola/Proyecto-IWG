@@ -119,12 +119,12 @@ def api(request):
             with open(ruta, 'r', encoding='utf-8') as archivo_json:  
                 lista_de_diccionarios = json.load(archivo_json)
             for diccionario in lista_de_diccionarios:
-                if diccionario["Comuna"] == ciudad or diccionario["Provincia"] == ciudad:
+                if diccionario["Comuna"] == ciudad:
                     estado = diccionario["Región"]
             if ciudad=="Llay-Llay":
                 ciudad="Llaillay"
-            ciudad =ciudad.replace(' ', '%20').replace('\xa0', '').replace("\xf3", 'o').replace("\xed", 'i')
-            estado = estado.replace(' ', '%20').replace('\xa0', '').replace('\xed', 'i').replace('\xe1','a')
+            ciudad =ciudad.replace(' ', '%20').replace('\xa0', '').replace("\xf3", 'o').replace("\xed", 'i').replace('\xe9', 'e').replace("\xf1", 'n')
+            estado = estado.replace(' ', '%20').replace('\xa0', '').replace('\xed', 'i').replace('\xe1','a').replace("\xf3", 'o')
             url = urllib.request.Request(f"http://api.airvisual.com/v2/city?city={ciudad}&state={estado}&country=Chile&key=4217e686-4099-4071-b670-5664769faaad")
             source = urllib.request.urlopen(url).read()
             alo = json.loads(source)
