@@ -123,9 +123,9 @@ def api(request):
                     estado = diccionario["Región"]
             if ciudad=="Llay-Llay":
                 ciudad="Llaillay"
-            ciudad =ciudad.replace(' ', '%20').replace('\xa0', '').replace("\xf3", 'o').replace("\xed", 'i').replace('\xe9', 'e').replace("\xf1", 'n')
-            estado = estado.replace(' ', '%20').replace('\xa0', '').replace('\xed', 'i').replace('\xe1','a').replace("\xf3", 'o')
-            url = urllib.request.Request(f"http://api.airvisual.com/v2/city?city={ciudad}&state={estado}&country=Chile&key=4217e686-4099-4071-b670-5664769faaad")
+            ciudad =ciudad.replace(' ', '%20').replace('\xa0', '').replace("\xf3", 'o').replace("\xed", 'i').replace('\xe9', 'e').replace("\xf1", 'n').replace("\xe1", 'a')
+            estado = estado.replace(' ', '%20').replace('\xa0', '').replace('\xed', 'i').replace('\xe1','a').replace("\xf3", 'o').replace("\xd1", 'n')
+            url = urllib.request.Request(f"http://api.airvisual.com/v2/city?city={ciudad}&state={estado}&country=Chile&key=7257bd85-58af-4c65-aa42-0d8bd2326440")
             source = urllib.request.urlopen(url).read()
             alo = json.loads(source)
             url_2= ('https://api.tomorrow.io/v4/weather/realtime?location='+estado,' ',ciudad+'&apikey=cRvA0jgpepZ88dCz8vK5S8HrcL5qPm8C')
