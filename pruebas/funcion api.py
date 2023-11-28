@@ -1,7 +1,7 @@
 import requests
-estado = "Valparaiso" #variable que tiene que ingresar el usuario region
+estado = "O'Higgins" #variable que tiene que ingresar el usuario region
 estado = estado.replace(' ', '%20')
-ciudad = "Valparaiso" #variable que tiene que ingresar el usuario comuna
+ciudad = "San Fernando" #variable que tiene que ingresar el usuario comuna
 ciudad = ciudad.replace(' ', '%20')
 url = ["http://api.airvisual.com/v2/city?city="+ciudad+"&state="+estado+"&country=Chile&key=4217e686-4099-4071-b670-5664769faaad"]
 url = "".join(url)

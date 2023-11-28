@@ -62,6 +62,14 @@ def estados(request, imageName):
     estado = imageName
     if estado == "Arica":
         estado = "Arica y Parinacota"
+    if estado == "OHiggins":
+        estado = "O'Higgins"
+    if estado == "lagos":
+        estado = "Los Lagos"
+    if estado == "rios":
+        estado = "Los Rios"
+    if estado == "metropo":
+        estado = "Santiago Metropolitan"
     url = "http://api.airvisual.com/v2/cities?state="+estado+"&country=Chile&key=4217e686-4099-4071-b670-5664769faaad"
     
     try:
@@ -84,7 +92,7 @@ def ciudad_nombre(city_name):
 def obtener_calidad_aire_ciudad(request, imageName, boton):
     estado = imageName
     ciudad = boton
-    url = f"http://api.airvisual.com/v2/city?city={ciudad}&state={estado}&country=Chile&key=4217e686-4099-4071-b670-5664769faaad"
+    url = "http://api.airvisual.com/v2/city?city={ciudad}&state={estado}&country=Chile&key=4217e686-4099-4071-b670-5664769faaad"
 
     try:
         response = requests.get(url)

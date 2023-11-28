@@ -5,7 +5,6 @@
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;,">
     <link rel="stylesheet" href="{% static 'css/idea.css' %}">
     <link rel="stylesheet" href="{% static 'css/arrastre2.css' %}">
-    <link rel="stylesheet" href="{% static 'css/estados.css' %}"> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,23 +31,35 @@
     </div>
     <h1 id="contentTitle">¿Cómo está la calidad del aire?</h1>
     <img src="{% static 'img/mapa.png' %}" alt="Mapa con las regiones de Chile" id="mapaRegiones">
-    <div class="container">
-        <img src="{% static 'img/Morado.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Aisen">
-        <img src="{% static 'img/Verde.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Antofagasta">
-        <img src="{% static 'img/Naranja.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Arica">
-        <img src="{% static 'img/Celeste.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Atacama">
+    <div class="container"> 
+        <img src="{% static 'img/image/Morado.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Aisen">
+        <img src="{% static 'img/image/Verde.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Antofagasta">
+        <img src="{% static 'img/image/Naranja.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Arica">
+        <img src="{% static 'img/image/Celeste.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Atacama">
+        <img src="{% static 'img/image/Verde_oscuro.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Biobio">
+        <img src="{% static 'img/image/Burdeo.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Coquimbo">
+        <img src="{% static 'img/image/Rosa.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Araucania">
+        <img src="{% static 'img/image/Amarillo.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="OHiggins">
+        <img src="{% static 'img/image/Gris.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="lagos">
+        <img src="{% static 'img/image/Rosa2.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="rios">
+        <img src="{% static 'img/image/Magalla.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Magallanes">
+        <img src="{% static 'img/image/Piel.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Maule">
+        <img src="{% static 'img/image/Rojo.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="metropo">
+        <img src="{% static 'img/image/Verde2.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Tarapaca">
+        <img src="{% static 'img/image/Algo.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Valparaiso">
     </div>
-    <div class="container" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <div class="figura">
-            <div class="box" id="0"></div>
-            <h2>Comunas</h2>
+    <div class="result-container">
+        <div class="container" id="cityList" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="figura">
+                <div class="box" id="0"></div>
+                <h2>Comunas</h2>
+            </div>
         </div>
+        <div id="listaContainer" class="container">
+            <ul id="lista"></ul>
+        </div>
+        <div id="resultado"></div>
     </div>
-    <div id="cityList" class="button-container">
-        <ul id="lista">
-        </ul>
-    </div>
-    <div id="resultado"></div>
     <script src="{% static 'java/arrastre.js' %}"></script>
 
     <!--
