@@ -25,6 +25,7 @@ h1 {
     position: relative;
     margin-top: 20px;
     flex-direction: row;
+    background-color: red;
 }
 
 .container #cityList button {
@@ -34,26 +35,91 @@ h1 {
 
 #Aisen{
     position: relative;
-    top: 82px; /* ajusta la posición vertical según tus necesidades */
-    left: -560px; /* ajusta la posición horizontal según tus necesidades */
+    top:80px;
+    left: -377px
 }
 
-#Antofagasta {
+#Antofagasta{
     position: relative;
-    top: 103px;
-    left: -593px;
+    top: 102px;
+    left: -411px
 }
 
-#Arica {
+#Arica{
     position: relative;
-    top: 124px;
-    left: -626px;
+    top: 122px;
+    left: -444px
 }
 
-#Atacama {
+#Atacama{
     position: relative;
-    top: 145px;
-    left: -660px;
+    top: 142px;
+    left: -478px
+}
+
+#Biobio{
+    position: relative;
+    top: 163px;
+    left: -511px
+}
+
+#Coquimbo{
+    position: relative;
+    top: 183px;
+    left: -544px
+}
+
+#Araucania{
+    position: relative;
+    top: 204px;
+    left: -577px
+}
+
+#OHiggins{
+    position: relative;
+    top: 224px;
+    left: -611px
+}
+
+#lagos{
+    position: relative;
+    top: 246px;
+    left: -644px
+}
+
+#rios{
+    position: relative;
+    top: 267px;
+    left: -677px;
+}
+
+#Magallanes{
+    position: relative;
+    top: 287px;
+    left: -710px;
+}
+
+#Maule{
+    position: relative;
+    top: 307px;
+    left: -743px;
+}
+#metropo{
+    position: relative;
+    top: 327px;
+    left: -776px;
+}
+
+#Tarapaca{
+    position: relative;
+    top: 347px;
+    left: -810px;
+}
+
+#Valparaiso{
+    position: relative;
+    top: 369px;
+    left: -843px
 }
 
 .container img {
@@ -61,6 +127,7 @@ h1 {
     height: auto;
     border: 2px solid #555;
     border-radius: 2px;
+    z-index: 2;
 }
 
 .figura {
