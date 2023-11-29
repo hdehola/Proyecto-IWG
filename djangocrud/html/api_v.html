@@ -1,18 +1,40 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title> API </title>
+    <link rel="stylesheet" href="{% static 'css/api_v.css' %}">
 </head>
 <body>
-    <div class="container">
-        <h1>Aquio= <a class="display-1">{{aqiuo}}</a></h1> 
-        <h1>Humedad= <a class="display-1">{{humedad}}</a></h1>
-        <h1>Probabiliad de Lluvia= <a class="display-1">{{Probabilidad_de_Lluvia}}</a></h1>
-        <h1>Velocidad del viento= <a class="display-1">{{Velocidad_del_Viento}}</a></h1>
-        <h1>Dirección del viento= <a class="display-1">{{Dirección_del_Viento}}</a></h1>
-        <h1>Temperatura= <a class="display-1">{{Temperatura}}</a></h1>
-        <h1>Sensación térmica= <a class="display-1">{{Sensación_Térmica}}</a></h1>
-    </form>
+    <a href="http://127.0.0.1:8000/"><button id="projectShakeButton"><span>PROJECT SHAKE</span></button></a>
+    <div id="botones">
+        {% if user.is_authenticated %}
+            <a href="logout">
+                <button id="logoutButton">
+                    <span>Logout</span>
+                </button>
+            </a>
+        {% else %}
+            <a href="login" ><button  id="ingresaButton"><span>Ingresa</span></button></a>
+            <a href="register" ><button  id="registrateButton"><span>Regístrate</span></button></a>
+        {% endif %}
+        <a href="about-us" ><button  id="sobreNosotrosButton"><span>Sobre Nosotros</span></button></a>
+    </div>
+
+<div class="titulo">
+    <h1>Comuna, Región= <a class="display-1">{{comuna}},{{region}}</a></h1>
 </div>
+
+    <div class="container">
+        <!--<h1>Aquio= <a class="display-1">{{aqiuo}}</a></h1> -->
+        <h2>Humedad= <a class="display-1">{{humedad}}</a></h2>
+        <h2>Probabiliad de Lluvia= <a class="display-1">{{Probabilidad_de_Lluvia}}</a></h2>
+        <h2>Velocidad del viento= <a class="display-1">{{Velocidad_del_Viento}}</a></h2>
+        <h2>Dirección del viento= <a class="display-1">{{Dirección_del_Viento}}</a></h2>
+        <h2>Temperatura= <a class="display-1">{{Temperatura}}</a></h2>
+        <h2>Sensación térmica= <a class="display-1">{{Sensación_Térmica}}</a></h2>
+    </div>
+    
 </body>
+
 </html>
