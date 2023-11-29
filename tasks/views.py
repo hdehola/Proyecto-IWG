@@ -92,8 +92,7 @@ def ciudad_nombre(city_name):
 def obtener_calidad_aire_ciudad(request, imageName, boton):
     estado = imageName
     ciudad = boton
-    url = "http://api.airvisual.com/v2/city?city={ciudad}&state={estado}&country=Chile&key=4217e686-4099-4071-b670-5664769faaad"
-
+    url = "http://api.airvisual.com/v2/city?city="+ciudad+"&state="+estado+"&country=Chile&key=4217e686-4099-4071-b670-5664769faaad"
     try:
         response = requests.get(url)
         alo = response.json()
@@ -115,6 +114,7 @@ def obtener_calidad_aire_ciudad(request, imageName, boton):
 
             return JsonResponse({'dato': dato, 'calidad_aire': calidad_aire})
         else:
+            print(alo)
             return JsonResponse({'error': 'Error en la respuesta de la API'})
     except requests.exceptions.RequestException as e:
         return JsonResponse({'error': f'Error en la solicitud: {str(e)}'})
