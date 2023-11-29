@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.newhome,name='new-home'),
     path('test/', views.test, name= 'test'),
+    path('prueba/', views.prueba, name= 'prueba'),
     path('register/', views.register, name ='register'),
     path('logout/', views.cerrar_sesion, name= 'logout'),
     path('login/', views.login_view, name= 'login'),#url para el login
