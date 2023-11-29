@@ -180,3 +180,5 @@ def api_2(request):
     else:
         print("API en cooldown")
         
+def prueba(request):        
+    return render(request, 'prueba.html',{})
