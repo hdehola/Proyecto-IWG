@@ -30,23 +30,21 @@
         <a href="http://127.0.0.1:8000/about-us/" ><button  id="sobreNosotrosButton"><span>Sobre Nosotros</span></button></a>
     </div>
     <h1 id="contentTitle">¿Cómo está la calidad del aire?</h1>
-    <img src="{% static 'img/mapa.png' %}" alt="Mapa con las regiones de Chile" id="mapaRegiones">
-    <div class="container"> 
-        <img src="{% static 'img/image/Morado.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Aisen">
-        <img src="{% static 'img/image/Verde.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Antofagasta">
-        <img src="{% static 'img/image/Naranja.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Arica">
-        <img src="{% static 'img/image/Celeste.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Atacama">
-        <img src="{% static 'img/image/Verde_oscuro.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Biobio">
-        <img src="{% static 'img/image/Burdeo.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Coquimbo">
-        <img src="{% static 'img/image/Rosa.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Araucania">
-        <img src="{% static 'img/image/Amarillo.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="OHiggins">
-        <img src="{% static 'img/image/Gris.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="lagos">
-        <img src="{% static 'img/image/Rosa2.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="rios">
-        <img src="{% static 'img/image/Magalla.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Magallanes">
-        <img src="{% static 'img/image/Piel.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Maule">
-        <img src="{% static 'img/image/Rojo.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="metropo">
-        <img src="{% static 'img/image/Verde2.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Tarapaca">
-        <img src="{% static 'img/image/Algo.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Valparaiso">
+    <div class="container" id ="regiones"> 
+        <img src="{% static 'img/regiones/Arica.png' %}" draggable="true" ondragstart="drag(event)" id="Arica" alt="">
+        <img src="{% static 'img/regiones/Tarapaca.png' %}" draggable="true" ondragstart="drag(event)" id="Tarapaca" alt=""> 
+        <img src="{% static 'img/regiones/Antofagasta.png' %}" draggable="true" ondragstart="drag(event)" id="Antofagasta" alt="">
+        <img src="{% static 'img/regiones/Atacama.png' %}" draggable="true" ondragstart="drag(event)" id="Atacama" alt="">
+        <img src="{% static 'img/regiones/Coquimbo.png' %}" draggable="true" ondragstart="drag(event)" id="Coquimbo" alt="">
+        <img src="{% static 'img/regiones/Valpo.png' %}" draggable="true" ondragstart="drag(event)" id="Valpo" alt="">
+        <img src="{% static 'img/regiones/Metropolitana.png' %}" draggable="true" ondragstart="drag(event)" id="Metropo" alt="">
+        <img src="{% static 'img/regiones/ohigins.png' %}" draggable="true" ondragstart="drag(event)" id="OHiggins" alt="">
+        <img src="{% static 'img/regiones/Bio Bio.png' %}" draggable="true" ondragstart="drag(event)" id="BioBio" alt="">
+        <img src="{% static 'img/regiones/Araucania.png' %}" draggable="true" ondragstart="drag(event)" id="Araucania" alt="">
+        <img src="{% static 'img/regiones/Los Rios.png' %}" draggable="true" ondragstart="drag(event)" id="rios" alt="">
+        <img src="{% static 'img/regiones/Los Lagos.png' %}" draggable="true" ondragstart="drag(event)" id="lagos" alt="">
+        <img src="{% static 'img/regiones/Aysen.png' %}" draggable="true" ondragstart="drag(event)" id="Aisen" alt="">
+        <img src="{% static 'img/regiones/Magallanes.png' %}" draggable="true" ondragstart="drag(event)" id="Magallanes" alt="">
     </div>
     <div class="result-container">
         <div class="container" id="cityList" ondrop="drop(event)" ondragover="allowDrop(event)">
