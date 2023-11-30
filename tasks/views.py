@@ -121,7 +121,7 @@ def obtener_calidad_aire_ciudad(request, imageName, boton):
                 calidad_aire = "Peligroso"
                 texto = "Alerta sanitaria. La poblacion general puede padecer graves efectos en su salud."
 
-            return JsonResponse({'dato': dato, 'calidad_aire': calidad_aire, 'texto': texto})
+            return JsonResponse({'dato': dato, 'comuna': ciudad, 'texto': texto})
         else:
             return JsonResponse({'error': 'Error en la respuesta de la API'})
     except requests.exceptions.RequestException as e:

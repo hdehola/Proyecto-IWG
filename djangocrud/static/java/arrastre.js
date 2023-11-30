@@ -102,7 +102,7 @@ function mostrarResultado(response) {
     if (response.error) {
         resultadoDiv.innerHTML = "Error: " + response.error;
     } else {
-        resultadoDiv.innerHTML = "Dato: " + response.dato + ", Calidad del aire: " + response.calidad_aire +"<br><br>Estado:" + response.texto;
+        resultadoDiv.innerHTML = "Comuna: " + response.comuna + ", calidad del aire: " + response.dato +"<br><br>Estado:" + response.texto;
     }
 }
 
