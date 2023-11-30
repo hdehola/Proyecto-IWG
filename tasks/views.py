@@ -110,7 +110,7 @@ def obtener_calidad_aire_ciudad(request, imageName, boton):
                 texto = "La calidad del aire se es aceptable pero podria existir una preocupación hacia un grupo muy pequeño de personas altamente sensible a la contaminacion atmosferica."
             elif 100 < dato <= 150:
                 calidad_aire = "Perjudicial"
-                texto = "La calidad del aire puede presentar cierto riesgo para los grupos de personas sensibles o con  dificultades respiratorias. Probablemtne la poblacion general no se vea afectada."
+                texto = "La calidad del aire puede presentar cierto riesgo para los grupos de personas sensibles o con  dificultades respiratorias. Probablemente la población general no se vea afectada."
             elif 150 < dato <= 200:
                 calidad_aire = "Insalubre"
                 texto = "La calidad del aire no es optima. Todos puedes comenzar a peder efdectos menores en su salud y los grupos mas sensibles pueden padecer efectos graves."
