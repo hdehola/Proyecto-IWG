@@ -139,29 +139,27 @@ def api(request):
                     estado = diccionario["Región"]
             if ciudad=="Llay-Llay":
                 ciudad="Llaillay"
-            if estado=="Ñuble":
-                estado="Biobío"
             ciudad =ciudad.replace(' ', '%20').replace('\xa0', '').replace("\xf3", 'o').replace("\xed", 'i').replace('\xe9', 'e').replace("\xf1", 'n').replace("\xe1", 'a').replace('\xc1','A')
             estado = estado.replace(' ', '%20').replace('\xa0', '').replace('\xed', 'i').replace('\xe1','a').replace("\xf3", 'o').replace("\xd1", 'N')
-            url = urllib.request.Request(f"http://api.airvisual.com/v2/city?city={ciudad}&state={estado}&country=Chile&key=4217e686-4099-4071-b670-5664769faaad")
-            source = urllib.request.urlopen(url).read()
-            alo = json.loads(source)
-            if estado=="Biobio":
-                estado="Nuble"
             url_2= ('https://api.tomorrow.io/v4/weather/realtime?location='+estado,' ',ciudad+'&apikey=cRvA0jgpepZ88dCz8vK5S8HrcL5qPm8C')
             url_2 = "".join(url_2)
             payload={}
             headers = {}
             response = requests.request("GET", url_2, headers=headers, data=payload)
             ola= response.json()
-            if alo ["status"] == "success" and len(ola) == 2:
-                dato = { "aqiuo": str(alo["data"]["current"]["pollution"]["aqius"]).capitalize(),
-                        'humedad': str(ola['data']['values']['humidity'])+'%',
+            ciudad=ciudad.replace('%20',' ')
+            estado=estado.replace('%20',' ')
+            if ciudad=="Llaillay":
+                ciudad="Llay-Llay"
+            if len(ola) == 2:
+                dato = {'humedad': str(ola['data']['values']['humidity'])+'%',
                         'Probabilidad_de_Lluvia': str(ola["data"]["values"]["precipitationProbability"])+'%',
                         'Velocidad_del_Viento': str(ola["data"]["values"]["windSpeed"])+'[Km/h]',
                         'Dirección_del_Viento': str(ola["data"]["values"]["windDirection"]),
                         'Temperatura': str(ola["data"]["values"]["temperature"])+'°C',
-                        'Sensación_Térmica': str(ola["data"]["values"]["temperatureApparent"])+'°C'
+                        'Sensación_Térmica': str(ola["data"]["values"]["temperatureApparent"])+'°C',
+                        'Comuna': str(ciudad),
+                        'Región': str(estado)
                         }
                 return render(request,'api_v.html', dato)
     except HTTPError as e:
