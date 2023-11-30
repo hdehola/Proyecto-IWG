@@ -1,0 +1,189 @@
+body {
+    flex-wrap: wrap;
+    margin: 0;
+    width: 98vw;
+    height: 288vh;
+    text-shadow: 8px 8px 10px #0000008c;
+    background-color: #343a40;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
+    }
+
+    .titulo{
+        background:transparent;
+        border: 3px solid blue;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 30px blueviolet;
+        margin-top: 100px;
+        width: 600px;
+        margin-left: 310px;
+        text-align: center;
+        margin-top: 140px;
+        }
+    h1{
+        color: white;
+    }
+
+    h2{
+        color: white;
+    }
+
+    .container{
+        background:transparent;
+        border: 3px solid red;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 30px rgb(170, 43, 5);
+        margin-top: 100px;
+        width: 600px;
+        margin-left: 310px;
+        text-align: center;
+        margin-top: 40px;
+        
+    }
+
+    #projectShakeButton{
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        border: 0;
+        background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
+        border-radius: 8px;
+        color: white;
+        display: flex;
+        font-size: 18px;
+        padding: 4px;
+        cursor: pointer;
+        transition: .3s;
+    }
+    #projectShakeButton span{
+        background-color: #111;
+        padding: 16px 24px;
+        border-radius: 6px;
+        transition: .3s;
+
+    }
+    #projectShakeButton:hover span{
+        background: none;
+
+    }
+    #projectShakeButton:active{
+        transform: scale(0.9);
+
+    }
+    #logoutButton{
+        position: absolute;
+        top: 3px;
+        right: 195px;
+        border: 0;
+        background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
+        border-radius: 8px;
+        color: white;
+        display: flex;
+        font-size: 18px;
+        padding: 4px;
+        cursor: pointer;
+        transition: .3s;
+    }
+    #logoutButton span{
+        background-color: #111;
+        padding: 16px 24px;
+        border-radius: 6px;
+        transition: .3s;
+
+    }
+    #logoutButton:hover span{
+        background: none;
+
+    }
+    #logoutButton:active{
+        transform: scale(0.9);
+
+    }
+    #ingresaButton{
+        position: absolute;
+        top: 3px;
+        right: 340px;
+        border: 0;
+        background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
+        border-radius: 8px;
+        color: white;
+        display: flex;
+        font-size: 18px;
+        padding: 4px;
+        cursor: pointer;
+        transition: .3s;
+    }
+    #ingresaButton span{
+        background-color: #111;
+        padding: 16px 24px;
+        border-radius: 6px;
+        transition: .3s;
+
+    }
+    #ingresaButton:hover span{
+        background: none;
+
+    }
+    #ingresaButton:active{
+        transform: scale(0.9);
+
+    }
+    #registrateButton{
+        position: absolute;
+        top: 3px;
+        right: 193px;
+        border: 0;
+        background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
+        border-radius: 8px;
+        color: white;
+        display: flex;
+        font-size: 18px;
+        padding: 4px;
+        cursor: pointer;
+        transition: .3s;
+    }
+    #registrateButton span{
+        background-color: #111;
+        padding: 16px 24px;
+        border-radius: 6px;
+        transition: .3s;
+
+    }
+    #registrateButton:hover span{
+        background: none;
+
+    }
+    #registrateButton:active{
+        transform: scale(0.9);
+
+    }
+    #sobreNosotrosButton{
+        position: absolute;
+        top: 3px;
+        right: 5px;
+        border: 0;
+        background-image: linear-gradient(150deg, #9500ff,#09f,#00ddff);
+        border-radius: 8px;
+        color: white;
+        display: flex;
+        font-size: 18px;
+        padding: 4px;
+        cursor: pointer;
+        transition: .3s;
+    }
+    #sobreNosotrosButton span{
+        background-color: #111;
+        padding: 16px 24px;
+        border-radius: 6px;
+        transition: .3s;
+
+    }
+    #sobreNosotrosButton:hover span{
+        background: none;
+
+    }
+    #sobreNosotrosButton:active{
+        transform: scale(0.9);
+
+    }

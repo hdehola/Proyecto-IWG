@@ -113,7 +113,7 @@ a{
 .mb-2{
     text-align: center;
     color: white;
-    text-shadow: 3px 0px black, 2px 2px blue, -2px 2px blueviolet;
+    /*text-shadow: 3px 0px black, 2px 2px blue, -2px 2px blueviolet;*/
     font-family: Arial, sans-serif;
     margin-top: 10px;
     font-size: large;
