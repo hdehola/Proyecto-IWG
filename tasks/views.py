@@ -90,31 +90,39 @@ def ciudad_nombre(city_name):
     return HttpResponse("Recibido: " + city_name)
 
 def obtener_calidad_aire_ciudad(request, imageName, boton):
-    estado = imageName
-    ciudad = boton
+    estado = str(imageName)
+    ciudad = str(boton)
     url = "http://api.airvisual.com/v2/city?city="+ciudad+"&state="+estado+"&country=Chile&key=4217e686-4099-4071-b670-5664769faaad"
+    print(ciudad)
     try:
         response = requests.get(url)
+        print(response)
         alo = response.json()
+        print(alo)
         if alo["status"] == "success":
             dato = alo["data"]["current"]["pollution"]["aqius"]
 
             if 0 <= dato <= 50:
-                calidad_aire = "Verde"
+                calidad_aire = "Buena"
+                texto = "Bueno; La calidad del aire se considera satisfactoria y la contaminación atmosferica presenta un riesgo escaso o nulo."
             elif 50 < dato <= 100:
-                calidad_aire = "Amarillo"
+                calidad_aire = "Moderada"
+                texto = "Moderado; La calidad del aire se es aceptable pero podria existir una preocupación hacia un grupo muy pequeño de personas altamente sensible a la contaminacion atmosferica."
             elif 100 < dato <= 150:
-                calidad_aire = "Naranja"
+                calidad_aire = "Perjudicial"
+                texto = "Perjudicial; La calidad del aire puede presentar cierto riesgo para los grupos de personas sensibles o con  dificultades respiratorias. Probablemtne la poblacion general no se vea afectada."
             elif 150 < dato <= 200:
-                calidad_aire = "Rojo"
+                calidad_aire = "Insalubre"
+                texto = "Insalubre; La calidad del aire no es optima. Todos puedes comenzar a peder efdectos menores en su salud y los grupos mas sensibles pueden padecer efectos graves."
             elif 200 < dato <= 300:
-                calidad_aire = "Morado"
+                calidad_aire = "Riesgoso"
+                texto = "Riesgoso; Advertencia sanitaria. Es mayor la probabilidad de que la poblacion general se vea afectada."
             else:
-                calidad_aire = "Cafe"
+                calidad_aire = "Peligroso"
+                texto = "Peligroso; Alerta sanitaria. La poblacion general puede padecer graves efectos en su salud."
 
-            return JsonResponse({'dato': dato, 'calidad_aire': calidad_aire})
+            return JsonResponse({'dato': dato, 'calidad_aire': calidad_aire, 'texto': texto})
         else:
-            print(alo)
             return JsonResponse({'error': 'Error en la respuesta de la API'})
     except requests.exceptions.RequestException as e:
         return JsonResponse({'error': f'Error en la solicitud: {str(e)}'})

@@ -15,7 +15,7 @@
             <div class="box" id="0"></div>
         </div>
     </div>
-    <a href="http://127.0.0.1:8000/"><button id="projectShakeButton"><span>PROJECT SHAKE</span></button></a>
+    <a href="http://127.0.0.1:8000/"><button id="projectShakeButton"><span> PROJECT SHAKE</span></button></a>
     <div id="botones">
         {% if user.is_authenticated %}
             <a href="http://127.0.0.1:8000/logout/">
@@ -29,55 +29,34 @@
         {% endif %}
         <a href="http://127.0.0.1:8000/about-us/" ><button  id="sobreNosotrosButton"><span>Sobre Nosotros</span></button></a>
     </div>
-    <h1 id="contentTitle">¿Cómo está la calidad del aire?</h1>
-    <div class="container" id ="regiones"> 
-        <img src="{% static 'img/regiones/Arica.png' %}" draggable="true" ondragstart="drag(event)" id="Arica" alt="">
-        <img src="{% static 'img/regiones/Tarapaca.png' %}" draggable="true" ondragstart="drag(event)" id="Tarapaca" alt=""> 
-        <img src="{% static 'img/regiones/Antofagasta.png' %}" draggable="true" ondragstart="drag(event)" id="Antofagasta" alt="">
-        <img src="{% static 'img/regiones/Atacama.png' %}" draggable="true" ondragstart="drag(event)" id="Atacama" alt="">
-        <img src="{% static 'img/regiones/Coquimbo.png' %}" draggable="true" ondragstart="drag(event)" id="Coquimbo" alt="">
-        <img src="{% static 'img/regiones/Valpo.png' %}" draggable="true" ondragstart="drag(event)" id="Valpo" alt="">
-        <img src="{% static 'img/regiones/Metropolitana.png' %}" draggable="true" ondragstart="drag(event)" id="Metropo" alt="">
-        <img src="{% static 'img/regiones/ohigins.png' %}" draggable="true" ondragstart="drag(event)" id="OHiggins" alt="">
-        <img src="{% static 'img/regiones/Bio Bio.png' %}" draggable="true" ondragstart="drag(event)" id="BioBio" alt="">
-        <img src="{% static 'img/regiones/Araucania.png' %}" draggable="true" ondragstart="drag(event)" id="Araucania" alt="">
-        <img src="{% static 'img/regiones/Los Rios.png' %}" draggable="true" ondragstart="drag(event)" id="rios" alt="">
-        <img src="{% static 'img/regiones/Los Lagos.png' %}" draggable="true" ondragstart="drag(event)" id="lagos" alt="">
-        <img src="{% static 'img/regiones/Aysen.png' %}" draggable="true" ondragstart="drag(event)" id="Aisen" alt="">
-        <img src="{% static 'img/regiones/Magallanes.png' %}" draggable="true" ondragstart="drag(event)" id="Magallanes" alt="">
+    <h1 id="contentTitle" style="color: white;">¿Cómo está la calidad del aire?</h1>
+    <img src="{% static 'img/Final.png' %}" alt="Mapa con las regiones de Chile" id="mapaRegiones">
+    <div class="container"> 
+        <img src="{% static 'img/image/Morado.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Aisen">
+        <img src="{% static 'img/image/Verde.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Antofagasta">
+        <img src="{% static 'img/image/Naranja.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Arica">
+        <img src="{% static 'img/image/Celeste.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Atacama">
+        <img src="{% static 'img/image/Verde_oscuro.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Biobio">
+        <img src="{% static 'img/image/Burdeo.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Coquimbo">
+        <img src="{% static 'img/image/Rosa.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Araucania">
+        <img src="{% static 'img/image/Amarillo.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="OHiggins">
+        <img src="{% static 'img/image/Gris.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="lagos">
+        <img src="{% static 'img/image/Rosa2.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="rios">
+        <img src="{% static 'img/image/Magalla.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Magallanes">
+        <img src="{% static 'img/image/Piel.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Maule">
+        <img src="{% static 'img/image/Rojo.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="metropo">
+        <img src="{% static 'img/image/Verde2.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Tarapaca">
+        <img src="{% static 'img/image/Algo.png' %}" alt="" draggable="true" ondragstart="drag(event)" id="Valparaiso">
     </div>
-    <div class="result-container">
-        <div class="container" id="cityList" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <div class="figura">
-                <div class="box" id="0"></div>
-                <h2>Comunas</h2>
-            </div>
-        </div>
-        <div id="listaContainer" class="container">
-            <ul id="lista"></ul>
-        </div>
-        <div id="resultado"></div>
+    <div class="container" id="cityList" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="box" id="0"></div>
+        <h2 style="text-align: center;">Comunas</h2>
     </div>
+    <ul id="lista"></ul>
+    <div class="cuadrado" id="uno"></div>
+    <h3 id="resultado"></h3>
+    <div class="cuadrado" id="dos"></div>
+    <a href="http://127.0.0.1:8000/project-shake-corazon/"><button id="again"><span style="color: rgb(185, 184, 184);">Repetir</span></button></a>
     <script src="{% static 'java/arrastre.js' %}"></script>
-
-    <!--
-    <div>
-        <ul id="regiones">
-            <li><img src="{% static 'img/regiones/Arica.png' %}" draggable="true" id="Arica" alt="Arica"></li>
-            <li><img src="{% static 'img/regiones/Tarapaca.png' %}" draggable="true" id="Tarapaca" alt="Tarapaca"> </li>
-            <li><img src="{% static 'img/regiones/Antofagasta.png' %}" draggable="true" id="Antofagasta" alt="Antofagasta"></li>
-            <li><img src="{% static 'img/regiones/Atacama.png' %}" draggable="true" id="Atacama" alt="Atacama"></li>
-            <li><img src="{% static 'img/regiones/Coquimbo.png' %}" draggable="true" id="Coquimbo" alt="Coquimbo"></li>
-            <li><img src="{% static 'img/regiones/Valpo.png' %}" draggable="true" id="Valpo" alt="Valpo"></li>
-            <li><img src="{% static 'img/regiones/Metropolitana.png' %}" draggable="true" id="Metropolitana" alt="Metropolitana"></li>
-            <li><img src="{% static 'img/regiones/O Higgins.png' %}" draggable="true" id="O Higgins" alt="O Higgins"></li>
-            <li><img src="{% static 'img/regiones/Bio Bio.png' %}" draggable="true" id="Bio Bio" alt="Bio Bio"></li>
-            <li><img src="{% static 'img/regiones/Araucania.png' %}" draggable="true" id="Araucania" alt="Araucania"></li>
-            <li><img src="{% static 'img/regiones/Los Rios.png' %}" draggable="true" id="Los Rios" alt="Los Rios"></li>
-            <li><img src="{% static 'img/regiones/Los Lagos.png' %}" draggable="true" id="Los Lagos" alt="Los Lagos"></li>
-            <li><img src="{% static 'img/regiones/Aysen.png' %}" draggable="true" id="Aysen" alt="Aysen"></li>
-            <li><img src="{% static 'img/regiones/Magallanes.png' %}" draggable="true" id="Magallanes" alt="Magallanes"></li>
-    </div>
-    -->
 </body>
 </html>

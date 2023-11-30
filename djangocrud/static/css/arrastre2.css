@@ -1,18 +1,33 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #343a40;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
+    height: 110vh;
 }
 
-h1 {
-    color: #333;
-    position: relative;
-    top: -40px;
-    left: 0px;
+h2 {
+    color: white;
+    margin: 9px;
+    position: absolute;
+    top: -80px; /*abajo*/
+    left: -278px; /*derecha*/
+    z-index: 4;
+}
+
+h3{
+    position: absolute;
+    top: 180px; /*abajo*/ 
+    left: 1020px; /*derecha*/
+    width: 500px; /*ancho*/
+    height: 40px;/*largo*/
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    z-index:10;
 }
 
 .container {
@@ -20,106 +35,7 @@ h1 {
     justify-content: space-around;
     margin-top: 20px;
     flex-direction: row;
-}
-.container #cityList {
     position: relative;
-    margin-top: 20px;
-    flex-direction: row;
-    background-color: red;
-}
-
-.container #cityList button {
-    margin: 5px;
-    flex-direction: row;
-}
-
-#Aisen{
-    position: relative;
-    top:80px;
-    left: -377px
-}
-
-#Antofagasta{
-    position: relative;
-    top: 102px;
-    left: -411px
-}
-
-#Arica{
-    position: relative;
-    top: 122px;
-    left: -444px
-}
-
-#Atacama{
-    position: relative;
-    top: 142px;
-    left: -478px
-}
-
-#Biobio{
-    position: relative;
-    top: 163px;
-    left: -511px
-}
-
-#Coquimbo{
-    position: relative;
-    top: 183px;
-    left: -544px
-}
-
-#Araucania{
-    position: relative;
-    top: 204px;
-    left: -577px
-}
-
-#OHiggins{
-    position: relative;
-    top: 224px;
-    left: -611px
-}
-
-#lagos{
-    position: relative;
-    top: 246px;
-    left: -644px
-}
-
-#rios{
-    position: relative;
-    top: 267px;
-    left: -677px;
-}
-
-#Magallanes{
-    position: relative;
-    top: 287px;
-    left: -710px;
-}
-
-#Maule{
-    position: relative;
-    top: 307px;
-    left: -743px;
-}
-#metropo{
-    position: relative;
-    top: 327px;
-    left: -776px;
-}
-
-#Tarapaca{
-    position: relative;
-    top: 347px;
-    left: -810px;
-}
-
-#Valparaiso{
-    position: relative;
-    top: 369px;
-    left: -843px
 }
 
 .container img {
@@ -140,20 +56,165 @@ h1 {
 .box {
     width: 40px;
     height: 20px;
-    border: 2px dashed #000000;
+    border: 2px dashed white;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
     position: relative;
-    top: 0px;
-    left: 60px;
+    top: -70px;
+    left: -150px;
+    z-index: 1;
 }
 
-h2 {
-    color: #000000;
-    margin: 9px;
+.container #cityList {
     position: relative;
-    top: -33px;
-    left: -70px;
+    margin-top: 20px;
+    flex-direction: row;
+    background-color: red;
+    z-index: -1;
 }
 
+.container #cityList button {
+    margin: 5px;
+    flex-direction: row;
+}
+
+#uno {
+    width: 500px; /*ancho*/
+    height: 520px;/*largo*/
+    background-color: rgb( 3, 35, 54); 
+    position: absolute; 
+    top: 180px; /*abajo*/
+    left: 460px; /*derecha*/
+    z-index: -1; 
+    box-shadow:0 0 30px #09f;
+    border-radius: 12px;
+}
+
+#dos{
+    width: 500px;/*ancho*/
+    height: 520px;/*largo*/
+    background-color: rgb( 3, 35, 54); 
+    position: absolute; 
+    top: 180px; /*abajo*/
+    left: 1000px; /*derecha*/
+    z-index: -2;
+    box-shadow:0 0 30px #00ddff;
+    border: 2px solid ;
+    border-radius: 12px;
+}
+
+#mapaRegiones{
+    box-shadow:0 0 30px #9500ff;
+    border-radius: 12px;
+}
+
+#Aisen{
+    position: relative;
+    top:80px;
+    left: -369px
+}
+
+#Antofagasta{
+    position: relative;
+    top: 102px;
+    left: -402px
+}
+
+#Arica{
+    position: relative;
+    top: 122px;
+    left: -435px
+}
+
+#Atacama{
+    position: relative;
+    top: 142px;
+    left: -469px
+}
+
+#Biobio{
+    position: relative;
+    top: 163px;
+    left: -502px
+}
+
+#Coquimbo{
+    position: relative;
+    top: 183px;
+    left: -535px
+}
+
+#Araucania{
+    position: relative;
+    top: 204px;
+    left: -568px
+}
+
+#OHiggins{
+    position: relative;
+    top: 224px;
+    left: -602px
+}
+
+#lagos{
+    position: relative;
+    top: 246px;
+    left: -635px
+}
+
+#rios{
+    position: relative;
+    top: 267px;
+    left: -668px;
+}
+
+#Magallanes{
+    position: relative;
+    top: 287px;
+    left: -701px;
+}
+
+#Maule{
+    position: relative;
+    top: 307px;
+    left: -734px;
+}
+
+#metropo{
+    position: relative;
+    top: 327px;
+    left: -767px;
+}
+
+#Tarapaca{
+    position: relative;
+    top: 347px;
+    left: -801px;
+}
+
+#Valparaiso{
+    position: relative;
+    top: 369px;
+    left: -834px
+}
+
+#contentTitle {
+    position: relative;
+    top: -40px;
+    left: 0px;
+}
+
+#lista{
+    position: absolute;
+    margin-top: -30px; /*abajo*/ 
+    margin-left: -500px; /*derecha*/
+}
+
+#again{
+    position: absolute;
+    background-color: transparent;
+    top: 660px;
+    left: 480px;
+    z-index: 11;
+}

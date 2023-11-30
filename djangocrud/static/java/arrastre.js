@@ -1,4 +1,3 @@
-
 function allowDrop(event) {
     event.preventDefault();
 }
@@ -15,26 +14,39 @@ function drop(event) {
 
     if (container) {
         if (container.querySelector("img")) {
-                return;
+            return;
         }
-    
-        var x = event.clientX - container.getBoundingClientRect().left;
-        var y = event.clientY - container.getBoundingClientRect().top;
-    
+        document.querySelectorAll(".container img").forEach(function (img) {
+            img.style.zIndex = "-2";
+        });
+        draggedElement.style.zIndex = "8";
+        
+
+        // Establece el tamaño del contenedor
+        var containerWidth = container.offsetWidth;
+        var containerHeight = container.offsetHeight;
+
+        // Establece el tamaño de la imagen
+        draggedElement.style.width = 40 + "px";
+        draggedElement.style.height = 20 + "px";
+
+        // Establece la posición de la imagen
         draggedElement.style.position = "absolute";
-        draggedElement.style.left = x + 700 + "px"; // Ajusta según tus necesidades
-        draggedElement.style.top = y + 300 + "px"; // Ajusta según tus necesidades
-    
+        draggedElement.style.left = "-150px"; // Ajusta según tus necesidades
+        draggedElement.style.top = "-70px"; // Ajusta según tus necesidades
+
+        // Agrega la imagen al contenedor
         container.appendChild(draggedElement);
+
         var imageName = draggedElement.getAttribute('id');
         callEstados(imageName);
     }
 }
 
+
 function callEstados(imageName) {
-    // Realiza una solicitud AJAX para llamar a la función estados en Django
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "/estados/" + imageName + "/", true);
+    xhr.open("GET", window.location.origin + "/estados/" + imageName + "/", true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var response = JSON.parse(xhr.responseText);
@@ -48,18 +60,18 @@ function updateCities(imageName, cities) {
     var container = document.querySelector("#cityList");
 
     var lista = document.getElementById("lista");
-    lista.innerHTML = ""
+    lista.innerHTML = "";
+
     cities.forEach(function (city) {
-        var item = document.createElement("li")
+        var item = document.createElement("li");
         var button = document.createElement("button");
         button.textContent = city;
         button.id = city.replace(/\s+/g, '-').toLowerCase();
-        item.appendChild(button)
-        console.log(item)
-        lista.appendChild(item)
-        
+        item.appendChild(button);
+        lista.appendChild(item);
+
         button.addEventListener("click", function () {
-            var cityName = city; 
+            var cityName = city;
             callPythonFunction(imageName, cityName);
         });
 
@@ -69,13 +81,13 @@ function updateCities(imageName, cities) {
 
 function callPythonFunction(imageName, cityName) {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", '/obtener_calidad_aire_ciudad/' + imageName + '/' + cityName + '/', true);
+    xhr.open("GET", window.location.origin + '/obtener_calidad_aire_ciudad/' + imageName + '/' + cityName + '/', true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4) {
             if (xhr.status == 200) {
                 var response = JSON.parse(xhr.responseText);
                 console.log("Datos de la calidad del aire:", response);
-                // Manejar la respuesta, por ejemplo, mostrarla en un elemento HTML
+
                 mostrarResultado(response);
             } else {
                 console.error("Error en la solicitud:", xhr.status);
@@ -86,12 +98,11 @@ function callPythonFunction(imageName, cityName) {
 }
 
 function mostrarResultado(response) {
-    // Manejar la respuesta, por ejemplo, mostrarla en un elemento HTML
     var resultadoDiv = document.getElementById("resultado");
     if (response.error) {
         resultadoDiv.innerHTML = "Error: " + response.error;
     } else {
-        resultadoDiv.innerHTML = "Dato: " + response.dato + ", Calidad del aire: " + response.calidad_aire;
+        resultadoDiv.innerHTML = "Dato: " + response.dato + ", Calidad del aire: " + response.calidad_aire +"<br><br>Estado:" + response.texto;
     }
 }
 
