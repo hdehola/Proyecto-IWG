@@ -104,22 +104,22 @@ def obtener_calidad_aire_ciudad(request, imageName, boton):
 
             if 0 <= dato <= 50:
                 calidad_aire = "Buena"
-                texto = "Bueno; La calidad del aire se considera satisfactoria y la contaminación atmosferica presenta un riesgo escaso o nulo."
+                texto = "La calidad del aire se considera satisfactoria y la contaminación atmosferica presenta un riesgo escaso o nulo."
             elif 50 < dato <= 100:
                 calidad_aire = "Moderada"
-                texto = "Moderado; La calidad del aire se es aceptable pero podria existir una preocupación hacia un grupo muy pequeño de personas altamente sensible a la contaminacion atmosferica."
+                texto = "La calidad del aire se es aceptable pero podria existir una preocupación hacia un grupo muy pequeño de personas altamente sensible a la contaminacion atmosferica."
             elif 100 < dato <= 150:
                 calidad_aire = "Perjudicial"
-                texto = "Perjudicial; La calidad del aire puede presentar cierto riesgo para los grupos de personas sensibles o con  dificultades respiratorias. Probablemtne la poblacion general no se vea afectada."
+                texto = "La calidad del aire puede presentar cierto riesgo para los grupos de personas sensibles o con  dificultades respiratorias. Probablemtne la poblacion general no se vea afectada."
             elif 150 < dato <= 200:
                 calidad_aire = "Insalubre"
-                texto = "Insalubre; La calidad del aire no es optima. Todos puedes comenzar a peder efdectos menores en su salud y los grupos mas sensibles pueden padecer efectos graves."
+                texto = "La calidad del aire no es optima. Todos puedes comenzar a peder efdectos menores en su salud y los grupos mas sensibles pueden padecer efectos graves."
             elif 200 < dato <= 300:
                 calidad_aire = "Riesgoso"
-                texto = "Riesgoso; Advertencia sanitaria. Es mayor la probabilidad de que la poblacion general se vea afectada."
+                texto = "Advertencia sanitaria. Es mayor la probabilidad de que la poblacion general se vea afectada."
             else:
                 calidad_aire = "Peligroso"
-                texto = "Peligroso; Alerta sanitaria. La poblacion general puede padecer graves efectos en su salud."
+                texto = "Alerta sanitaria. La poblacion general puede padecer graves efectos en su salud."
 
             return JsonResponse({'dato': dato, 'calidad_aire': calidad_aire, 'texto': texto})
         else:
