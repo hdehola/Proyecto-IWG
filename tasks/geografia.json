@@ -3779,7 +3779,7 @@
    "CUT (Código Único Territorial)": 11101,
    "Comuna": "Coyhaique",
    "Provincia": "Coyhaique",
-   "Región": " Aisen",
+   "Región": " Aysen",
    "Superficie (km2)": " 7,290.20 ",
    "Población Año 2017": " 57,818 ",
    "Densidad (hab.": {
@@ -3811,7 +3811,7 @@
    "CUT (Código Único Territorial)": 11201,
    "Comuna": "Puerto Aysén",
    "Provincia": "Aysén",
-   "Región": " Aisen",
+   "Región": " Aysen",
    "Superficie (km2)": " 29,796.40 ",
    "Población Año 2017": " 23,959 ",
    "Densidad (hab.": {
@@ -4115,7 +4115,7 @@
    "CUT (Código Único Territorial)": 13101,
    "Comuna": "Santiago",
    "Provincia": "Santiago",
-   "Región": " Santiago Metropolitan",
+   "Región": " Santiago Metropolitana",
    "Superficie (km2)": " 23.20 ",
    "Población Año 2017": " 404,495 ",
    "Densidad (hab.": {
@@ -4291,7 +4291,7 @@
    "CUT (Código Único Territorial)": 13112,
    "Comuna": "La Pintana",
    "Provincia": "Santiago",
-   "Región": " Santiago Metropolitan",
+   "Región": " Santiago Metropolitana",
    "Superficie (km2)": " 30.60 ",
    "Población Año 2017": " 177,335 ",
    "Densidad (hab.": {
@@ -4307,7 +4307,7 @@
    "CUT (Código Único Territorial)": 13113,
    "Comuna": "La Reina",
    "Provincia": "Santiago",
-   "Región": " Santiago Metropolitan",
+   "Región": " Santiago Metropolitana",
    "Superficie (km2)": " 23.00 ",
    "Población Año 2017": " 92,787 ",
    "Densidad (hab.": {
@@ -4323,7 +4323,7 @@
    "CUT (Código Único Territorial)": 13114,
    "Comuna": "Las Condes",
    "Provincia": "Santiago",
-   "Región": " Santiago Metropolitan",
+   "Región": " Santiago Metropolitana",
    "Superficie (km2)": " 99.00 ",
    "Población Año 2017": " 294,838 ",
    "Densidad (hab.": {
@@ -4627,7 +4627,7 @@
    "CUT (Código Único Territorial)": 13201,
    "Comuna": "Puente Alto",
    "Provincia": "Cordillera",
-   "Región": " Santiago Metropolitan",
+   "Región": " Santiago Metropolitana",
    "Superficie (km2)": " 88.00 ",
    "Población Año 2017": " 568,106 ",
    "Densidad (hab.": {
@@ -4819,7 +4819,7 @@
    "CUT (Código Único Territorial)": 13503,
    "Comuna": "Curacaví",
    "Provincia": "Melipilla",
-   "Región": " Santiago Metropolitan",
+   "Región": " Santiago Metropolitana",
    "Superficie (km2)": " 693.00 ",
    "Población Año 2017": " 32,579 ",
    "Densidad (hab.": {
@@ -4931,7 +4931,7 @@
    "CUT (Código Único Territorial)": 13605,
    "Comuna": "Peñaflor",
    "Provincia": "Talagante",
-   "Región": " Santiago Metropolitan",
+   "Región": " Santiago Metropolitana",
    "Superficie (km2)": " 69.00 ",
    "Población Año 2017": " 90,201 ",
    "Densidad (hab.": {
