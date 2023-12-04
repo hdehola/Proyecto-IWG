@@ -5,7 +5,7 @@ function allowDrop(event) {
 function drag(event) {
     event.dataTransfer.setData("text", event.target.id);
 }
-
+8
 function drop(event) {
     event.preventDefault();
     var data = event.dataTransfer.getData("text");

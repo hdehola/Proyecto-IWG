@@ -93,12 +93,9 @@ def obtener_calidad_aire_ciudad(request, imageName, boton):
     estado = str(imageName)
     ciudad = str(boton)
     url = "http://api.airvisual.com/v2/city?city="+ciudad+"&state="+estado+"&country=Chile&key=4217e686-4099-4071-b670-5664769faaad"
-    print(ciudad)
     try:
         response = requests.get(url)
-        print(response)
         alo = response.json()
-        print(alo)
         if alo["status"] == "success":
             dato = alo["data"]["current"]["pollution"]["aqius"]
 
