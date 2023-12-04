@@ -5,7 +5,7 @@ function allowDrop(event) {
 function drag(event) {
     event.dataTransfer.setData("text", event.target.id);
 }
-8
+
 function drop(event) {
     event.preventDefault();
     var data = event.dataTransfer.getData("text");
@@ -20,43 +20,34 @@ function drop(event) {
             img.style.zIndex = "-2";
         });
         draggedElement.style.zIndex = "8";
-        
 
-        // Establece el tamaño del contenedor
-        var containerWidth = container.offsetWidth;
-        var containerHeight = container.offsetHeight;
-
-        // Establece el tamaño de la imagen
         draggedElement.style.width = 40 + "px";
         draggedElement.style.height = 20 + "px";
 
-        // Establece la posición de la imagen
         draggedElement.style.position = "absolute";
-        draggedElement.style.left = "-150px"; // Ajusta según tus necesidades
-        draggedElement.style.top = "-70px"; // Ajusta según tus necesidades
+        draggedElement.style.left = "-150px"; 
+        draggedElement.style.top = "-70px"; 
 
-        // Agrega la imagen al contenedor
         container.appendChild(draggedElement);
 
         var imageName = draggedElement.getAttribute('id');
-        callEstados(imageName);
+        Estados(imageName);
     }
 }
 
-
-function callEstados(imageName) {
+function Estados(imageName) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", window.location.origin + "/estados/" + imageName + "/", true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var response = JSON.parse(xhr.responseText);
-            updateCities(imageName, response.cities);
+            ciudades(imageName, response.cities);
         }
     };
     xhr.send();
 }
 
-function updateCities(imageName, cities) {
+function ciudades(imageName, cities) {
     var container = document.querySelector("#cityList");
 
     var lista = document.getElementById("lista");
@@ -72,14 +63,14 @@ function updateCities(imageName, cities) {
 
         button.addEventListener("click", function () {
             var cityName = city;
-            callPythonFunction(imageName, cityName);
+            funcion(imageName, cityName);
         });
 
         container.appendChild(lista);
     });
 }
 
-function callPythonFunction(imageName, cityName) {
+function funcion(imageName, cityName) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", window.location.origin + '/obtener_calidad_aire_ciudad/' + imageName + '/' + cityName + '/', true);
     xhr.onreadystatechange = function () {
@@ -110,6 +101,6 @@ document.querySelectorAll('#lista button').forEach(function(button) {
     button.addEventListener("click", function () {
         var cityName = this.textContent;
         var imageName = this.id;
-        callPythonFunction(imageName, cityName);
+        funcion(imageName, cityName);
     });
 });
